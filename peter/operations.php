@@ -52,18 +52,10 @@
 			Select encryptie-mode: 			
 			<select name="encmode">
 			  <option value="Single Block Mode">Single block</option>
-			  <option value="ECB-128">ECB-128</option>
-			  <option value="ECB-192">ECB-192</option>
-			  <option value="ECB-256">ECB-256</option>
-			  <option value="CBC-128">CBC-128</option>
-			  <option value="CBC-192">CBC-192</option>
-			  <option value="CBC-256">CBC-256</option>
-			  <option value="CFB-128">CFB-128</option>
-			  <option value="CFB-192">CFB-192</option>
-			  <option value="CFB-256">CFB-256</option>
-			  <option value="CTR-128">CTR-128</option>
-			  <option value="CTR-192">CTR-192</option>
-			  <option value="CTR-256">CTR-256</option>			  
+			  <option value="ECB">ECB</option>			  
+			  <option value="CBC">CBC</option>			 
+			  <option value="CFB">CFB</option>			  
+			  <option value="CTR">CTR</option>			  		  
 			</select>
 			</body>
 			<html>

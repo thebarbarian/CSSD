@@ -215,18 +215,47 @@ private static $InvS_Box = array(
 			return($result);
       } //end function decrypt
 
-	  public function encrypt_ecb($input, $key)
-	  {
-			
+	   /**
+	    * Encrypten via ECB
+	    *
+	    * todo: testen. Waarschijnlijk gaat er iets mis met (het gebrek aan) padding.
+	    *
+	    * @param $input array De volledige input, dus meerdere blocks
+	    * @param $key array De key om mee te encrypten
+	    * @return array Encrypted data.
+	    */
+	   public function ecb_encrypt($input,$key){
+		   $IO = new ioOperations();
+		   $result = array();
+		   $max = sizeof($input);
+		   for($i = 0  ; $i < $max; $i += 256){
+			   $data = array_slice($input,$i,$i+256);
+			   // van een los bytearray blob naar een state, en dan weer terug naar een bytearray met goede padding.
+			   //$data = $IO->getState($data);
+			   //$data = $IO->convertStateToByteArray($data);
+			   $result = array_merge($result,self::encrypt($data,$key));
+		   }
+		   return $result;
+	   }
 
-		
-	  }
-	  
-	  public function decrypt_ecb($input,$key)
-	  {
-	  
-	  
-	  }
+	   /**
+	    * Decryptie via ECB
+	    *
+	    * todo: testen. Waarschijnlijk gaat er iets mis met (het gebrek aan) padding.
+	    *
+	    * @param $input array De volledige binaire input
+	    * @param $key array De key om mee te decrypten
+	    * @return array De decrypted waarde
+	    */
+	   public function ecb_decrypt($input,$key){
+		   $result = array();
+		   $max = sizeof($input);
+		   for($i = 0  ; $i < $max; $i += 256){
+			   $data = array_slice($input,$i,$i+256);
+			   $result = array_merge($result,self::decrypt($data,$key));
+		   }
+		   return $result;
+	   }
 	  
 	  public function encrypt_CBC_mode($input, $key)
 	  {	  
