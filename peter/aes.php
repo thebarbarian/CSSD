@@ -19,10 +19,20 @@
    else
    {
       //create AES state (4x4 bytes) of byte array
-      $state = $iop->getState($bytearray);
-      $input = $iop->getStates($byteArray);
+   //   $state = $iop->getState($bytearray);
+      $input = $iop->getStates($bytearray);
 	  
-	  $_SESSION
+	  $_SESSION['debug'] .= "input heeft ".count($input)." state blokken\n";
+	  $_SESSION['debug'] .= "Longer input converted to array of state blocks: \n";
+	  
+		/*
+	  for ($i=0; $i<16; $i++)
+		{
+			//for example the input-byte 5 should go to state[1][1], so state[5%4][floor(5/4)]
+			$state[$i%4][floor($i/4)] = $byteArray[$i];
+			//$_SESSION['debug'] .= "state[" . $i%4 . "][" . floor($i/4) . "]=" . $bytearray[$i] . "\n";
+		}*/
+	  
 	  
 	  
 	  //put key in 4x4 byte array too
@@ -47,63 +57,63 @@
             $result=$aesops->addRoundKey($state, $w, 0); //add roundkey 0 for this example
             break;
          case "encrypt":				
-				//$result=$aesops->encrypt($state, $key);	
-				
-				switch($encmode)
-				{
-					case "SBM":							
+			switch($encmode){
+				case "SBM":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->encrypt($state, $key);					
 					break;
-					case "ECB":
+				case "ECB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ecb_encrypt($input,$key);
 					break;
-					case "CBC":
+				case "CBC":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->cbc_encrypt($input,$key);
 					break;
-					case "CFB":
+				case "CFB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->cfb_encrypt($input,$key);
 					break;
-					case "CTR":
+				case "CTR":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ctr_encrypt($input,$key);
 					break;
-				}
-				
 				default:
-            $_SESSION['debug'] .= "\n Error, enc operation not valid";
+					$_SESSION['debug'] .= "\n Error, enc operation not valid";
+					break;
+				}
 			break;
          case "decrypt":       
-					//	$result=$aesops->decrypt($state, $key);
-						
-				switch($encmode)
-				{
-					case "SBM":
+			switch($encmode){
+				case "SBM":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->decrypt($state, $key);					
 					break;
-					case "ECB":
+				case "ECB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ecb_decrypt($input,$key);
 					break;
-					case "CBC":
+				case "CBC":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->cbc_decrypt($input,$key);
 					break;
-					case "CFB":
+				case "CFB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->cfb_decrypt($input,$key);
 					break;
-					case "CTR":
+				case "CTR":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ctr_decrypt($input,$key);
 					break;
+				default:
+					$_SESSION['debug'] .= "\n Error, dec operation not valid";
+					break;
 				}
-         default:
-            $_SESSION['debug'] .= "\n Error, dec operation not valid";		
+				break;
+		default:
+            $_SESSION['debug'] .= "\n Error, no such operation.";
+            break;
+
       }           
 
       // now convert back the final state to output
