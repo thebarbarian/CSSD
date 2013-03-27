@@ -123,6 +123,11 @@ function magic3($in,$key){
 	$in3 = $IO->getStates($in2);
 	$out = $AES->cbc_encrypt($in3,$key,$IV);
 	//$out = $AES->sbm_encrypt($in3,$key);
+	echo("VARDUMPS PETERS IV PROBLEMEN:");
+	var_dump($IV);
+	var_dump(implode(",",$IV));	
+	implode(",",$IV);
+	echo("EINDE VARDUMPS PETERS IV cbcPROBLEMEN:");
 	echo("<br / > out: ");
 	var_dump($out);
 	$out2 = $IO->convertStatesToByteArray($out);

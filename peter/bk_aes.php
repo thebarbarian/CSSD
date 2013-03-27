@@ -20,10 +20,10 @@
    {
       //create AES state (4x4 bytes) of byte array
       $state = $iop->getState($bytearray);
-      $input = $iop->getStates($bytearray);
+      $input = $iop->getStates($byteArray);
 	  
-	  $_SESSION['debug'] .= "input heeft ".count($input)." state blokken\n";  
-	  $_SESSION['debug'] .= "inhoud bytearray: ".implode(",",$bytearray)."\n"; 	  
+	  
+	  
 	  
 	  //put key in 4x4 byte array too
       //$key = $iop->getState($keyarray);
@@ -31,17 +31,6 @@
       // perform a subBytes operation
       $aesops = new Aes();
       $result = array();
-	 // $IV = $aesops->makeIV(); // we gebruiken zelfde IV voor alle encrypties
-	 // $IV=explode(",","a0,d4,90,97,e4,eb,ba,1,c9,c7,20,9c,e8,1d,1c,de");
-	 //$IV = array(0x12, 0x13, 0xfa, 0x1a, 0x2b, 0x3c,0x00, 0x01, 0x3c, 0x4a, 0x4c, 0x37,0x20, 0x21, 0x42, 0x11);
-	// IV voor tests volgens http://tools.ietf.org/html/draft-ietf-ipsec-ciph-aes-cbc-04
-	// 1 blok CBC encrypten IV :
-	// $IV = array(0x3d,0xaf,0xba,0x42,0x9d,0x9e,0xb4,0x30,0xb4,0x22,0xda,0x80,0x2c,0x9f,0xac,0x41);
-	// 2 blokken CBC encrypten IV :
-	//$IV=array(0x56,0x2e,0x17,0x99,0x6d,0x09,0x3d,0x28,0xdd,0xb3,0xba,0x69,0x5a,0x2e,0x6f,0x58);
-	// 3 blokken CBC encrypten IV :
-	$IV=array(0xc7,0x82,0xdc,0x4c,0x09,0x8c,0x66,0xcb,0xd9,0xcd,0x27,0xd8,0x25,0x68,0x2c,0x81);
-	
       $_SESSION['debug'] .= "\nThe ". $operation . " operation:\n";
       switch ($operation){
          case "subBytes":
@@ -58,70 +47,69 @@
             $result=$aesops->addRoundKey($state, $w, 0); //add roundkey 0 for this example
             break;
          case "encrypt":				
-			switch($encmode){
-				case "SBM":
+				//$result=$aesops->encrypt($state, $key);	
+				
+				switch($encmode)
+				{
+					case "SBM":							
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->sbm_encrypt($input,$key);
+					$result=$aesops->encrypt($state, $key);					
 					break;
-				case "ECB":
+					case "ECB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ecb_encrypt($input,$key);
 					break;
-				case "CBC":
+					case "CBC":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->cbc_encrypt($input,$key,$IV);
+					$result=$aesops->cbc_encrypt($input,$key);
 					break;
-				case "CFB":
+					case "CFB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->cfb_encrypt($input,$key,$IV);
+					$result=$aesops->cfb_encrypt($input,$key);
 					break;
-				case "CTR":
+					case "CTR":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->ctr_encrypt($input,$key,$IV);
-					break;
-				default:
-					$_SESSION['debug'] .= "\n Error, enc operation not valid";
+					$result=$aesops->ctr_encrypt($input,$key);
 					break;
 				}
+				
+				default:
+            $_SESSION['debug'] .= "\n Error, enc operation not valid";
 			break;
          case "decrypt":       
-			switch($encmode){
-				case "SBM":
+					//	$result=$aesops->decrypt($state, $key);
+						
+				switch($encmode)
+				{
+					case "SBM":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->sbm_decrypt($input, $key);
+					$result=$aesops->decrypt($state, $key);					
 					break;
-				case "ECB":
+					case "ECB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
 					$result=$aesops->ecb_decrypt($input,$key);
 					break;
-				case "CBC":
+					case "CBC":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->cbc_decrypt($input,$key,$IV);
+					$result=$aesops->cbc_decrypt($input,$key);
 					break;
-				case "CFB":
+					case "CFB":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->cfb_decrypt($input,$key,$IV);
+					$result=$aesops->cfb_decrypt($input,$key);
 					break;
-				case "CTR":
+					case "CTR":
 					$_SESSION['debug'] .= "Mode = ".$encmode."\n";
-					$result=$aesops->ctr_decrypt($input,$key,$IV);
-					break;
-				default:
-					$_SESSION['debug'] .= "\n Error, dec operation not valid";
+					$result=$aesops->ctr_decrypt($input,$key);
 					break;
 				}
-				break;
-		default:
-            $_SESSION['debug'] .= "\n Error, no such operation.";
-            break;
-
+         default:
+            $_SESSION['debug'] .= "\n Error, dec operation not valid";		
       }           
 
       // now convert back the final state to output
-      $_SESSION['debug'] .= "\nThis should only apear once.\n";
-      $output = $iop->convertStatesToByteString($result);
-      $_SESSION['debug'] .= "\n\nThe hexadecimal result of the ". $operation ." operation:\n$output\n";	  
-      $_SESSION['output'] .= $output;	 
+      $output = $iop->convertStateToByteArray($result);
+      $_SESSION['debug'] .= "\n\nThe hexadecimal result of the ". $operation ." operation:\n$output\n";
+      $_SESSION['output'] = $output;
    }
    header('Location:operations.php'); //reload the operations.php page with the session values
 ?>
@@ -191,14 +179,9 @@ private static $InvS_Box = array(
       array(0x1b, 0x00, 0x00, 0x00),
       array(0x36, 0x00, 0x00, 0x00) );
 
-		
-				
-		public function makeIV()
-		{
-
-			$IO = new ioOperations();
-
-
+		private static $IV = array();
+		private function makeIV()
+		{		
 		// Maken IV :
 			// Voor CBC mode moet er een Initialisatie Vector gemaakt worden. Een (bijna-) random block van 128 bits :
 			// De IV bloklengte moet gelijk zijn aan de blokgrootte van de boodschap. (en die is bij ons altijd 128 bit.)
@@ -209,8 +192,7 @@ private static $InvS_Box = array(
 				$IV[$i] = $random;
 			}
 			$_SESSION['debug'] .= "De IV als bytearray : ". implode(",", $IV) ."\n"; 
-			$IV = $IO->getState($IV); // maak een State blok van de IV
-			
+			$IV = self::getState($IV); // maak een State blok van de IV
 			return $IV;
 		}
 		
@@ -297,39 +279,6 @@ private static $InvS_Box = array(
 			return($result);
       } //end function decrypt
 
-
-	/**
-	 * Encrypts an array of states with Sbm
-	 * @param $input an array of states (only the first state will be processed)
-	 * @return array the encrypt state in an array of states
-	 */
-	public function sbm_encrypt($input,$key){
-		if(!$input || !is_array($input)){
-			die("Invalid input at smb_encrypt");
-		}else
-			$return = array();
-			$_SESSION['debug'] .= "PETERS DESPERATE BUG CHECK ON STATE:".implode(",",$input)."\n";
-			$return[0] = self::encrypt($input[0],$key);
-			return $return;
-	}
-
-
-
-	/**
-	 * decrypts an array of states with Sbm
-	 * @param $input an array of states (only the first state will be processed)
-	 * @return array the decrypt state in an array of states
-	 */
-	public function sbm_decrypt($input,$key){
-		if(!$input || !is_array($input)){
-			die("Invalid input at smb_decrypt");
-		}else
-			$return = array();
-			$return[0] = self::decrypt($input[0],$key);
-			return $return;
-	}
-
-
 	   /**
 	    * Encrypten via ECB
 	    *
@@ -341,12 +290,15 @@ private static $InvS_Box = array(
 	    */
 	   public function ecb_encrypt($input,$key)
 	   {
+		   $IO = new ioOperations();
 		   $result = array();
-		   $max = count($input);
-		   $_SESSION['debug'] .= "ECB: Size of input =".$max."\n";
-		   for($i = 0  ; $i < $max; $i++){
-			   $result[$i] = self::encrypt($input[$i],$key);
-
+		   $max = sizeof($input);
+		   for($i = 0  ; $i < $max; $i += 256){
+			   $data = array_slice($input,$i,$i+256);
+			   // van een los bytearray blob naar een state, en dan weer terug naar een bytearray met goede padding.
+			   //$data = $IO->getState($data);
+			   //$data = $IO->convertStateToByteArray($data);
+			   $result = array_merge($result,self::encrypt($data,$key));
 		   }
 		   return $result;
 	   }
@@ -364,60 +316,44 @@ private static $InvS_Box = array(
 	   {
 		   $result = array();
 		   $max = sizeof($input);
-		   for($i = 0  ; $i < $max; $i++){
-			   $result[$i] = self::decrypt($input[$i],$key);
+		   for($i = 0  ; $i < $max; $i += 256){
+			   $data = array_slice($input,$i,$i+256);
+			   $result = array_merge($result,self::decrypt($data,$key));
 		   }
 		   return $result;
 	   }
 	  
-	  public function cbc_encrypt($input, $key, $IV)
-	  {
-			// Er gaat iets helemaal mis met de IV vermoedelijk
-			// debuggen IV:			
-			$_SESSION['debug'] .= "imploded IV: \n".implode(",",$IV)."\n";
-			// De IV lijkt gewoon in orde te zijn nu
-            $IO = new ioOperations();
+	  public function cbc_encrypt($input, $key)
+	  {	  
 			// CBC Mode encryptie :
-			// $input is in dit geval een array van blokken van 128 bits groot (states).
+			// $input is in dit geval een 2-dimensionale array van blokken van 128 bits groot (states).			
+			// Maken IV :
+			$IV = self::makeIV();
+			
 			// Hoeveel blokken moeten we encrypten ?
 			$aantalBlokken = 0;
 			$aantalBlokken = count($input); // $input is een array van state blokken		
 			$endResult = array();
 			$result=array();
-			$XORresult=array();
 			$eersteBlok = array();
 			// Encryptie :					
 			// Stap 1 : Eerste blok klare tekst XORen met de IV.				
-			$eersteBlok = $input[0]; // Haal eerste state blok uit de array van blokken
-            $IV_stated  = $IO->getState($IV); // maak state van de IV voor XOR operatie
-			$_SESSION['debug'] .= "De IV stated: ".implode(",",$IV_stated)."\n"; // to be sure
-			$result = self::xorState($eersteBlok,$IV_stated);
-			$_SESSION['debug'] .= "Resultaat XOR met IV als bytearray: ".implode(",",$result)."\n";
-			// Encrypt het resultaat van de XOR tussen M1 en IV :
-			$result = self::encrypt($result,$key);
-			$endResult[0]=$result; // Eerste blok C1 opslaan in array	  	
-			
+			$eersteBlok = $input[0]; // Haal eerste state blok uit de array van blokken					
+			$result = self::xorState($eersteBlok,$IV);			
+			$_SESSION['debug'] .= "Resultaat XOR met IV als bytearray: ".implode(",", $result) ."\n"; 				
+		  				
 			// Stap 2 : Loop starten. Gebruik output van ieder blok om te XORen met volgende blok.
 			for ($p = 1 ; $p < $aantalBlokken;$p++) 
-			{
-				$XORresult = self::xorState($result, $input[$p]);
-				$result = self::encrypt($XORresult,$key);				
-				$endResult[$p] = $result;			
-			/*
-				PeterK: $input is al een array van states newb. nie mee rommelen dus.
-				$XORresult = self::xorState($result, $IO->getState($input[$p]));
-				$result = self::encrypt($XORresult,$key);				
-				$endResult[$p] = $result;
-			*/
-			}	
-			$_SESSION['debug'] .= "cbc encryptie eindresultaat:".implode(",",$endResult)."\n";	
+			{		
+				$result = self::encrypt($result,$key);
+				$result = xorState($result, $input[p]);					
+				$endResult[p] = $result;
+			}				
 			return $endResult; // array van encrypted blokken
-			
 	  }
 	  	  
-	  public function cbc_decrypt($input,$key,$IV)
-	  {
-            $IO = new ioOperations();
+	  public function cbc_decrypt($input,$key)
+	  {  
 			// CBC Mode decryptie :
 			// $input is in dit geval een array van blokken van 128 bits groot (states).
 			$result = array();
@@ -425,173 +361,63 @@ private static $InvS_Box = array(
 			$blokStore = array();
 			$aantalBlokken = count($input); 
 			// Stap 1
-			// Decryptie eerste blok uit encryptie methode :
+			// Decryptie laatste blok uit encryptie methode :
 			// Onthoud dit blok want het moet gexorred worden met de output van de volgende encryptie stap
 			$aantalBlokken = count($input);
-			$eersteBlokDecr = self::decrypt($input[0],$key);
+			$eersteBlokDecr = decrypt($input[$aantalBlokken]);
 			// XOR met IV na decryptie eerste blok (laatste blok van encryptie)
-			$result = self::xorState($eersteBlokDecr,$IO->getState($IV));
-			//$endResult[$aantalBlokken] = $result;
-			$endResult[0] = $result;
-
+			$result = xorState($eersteBlokDecr,$IV);	
+			$endResult[$aantalBlokken] = $result;
 			// Stap 2
 			// Loop waarin de encrypted blokken geXORred worden met de klare tekst na de volgende decrypt operatie
 			// onthoud blok in $eersteBlok
-			//$eersteBlok = $input[0]; // pak eerste blok uit encrypted array
+			$eersteBlok = $input[$aantalBlokken]; // pak laatste blok uit encrypted array
 			// output eerste stap met decryptie en IV-XOR zit in $result nu
 			// start loop			
-			for($i=1;$i<($aantalBlokken);$i++)
+			for($i=1;$i<($aantalBlokken-1);$i++)
 			{					
-				$result = self::decrypt($input[$i],$key);
-				$result = self::xorState($result,$input[($i-1)]);
-				
+				$result = decrypt($input[$i]);
+				$result = xorState($result,$input[($i+1)]);
 				$endResult[$i] = $result;
 			}
 			return $endResult;				
 	  }
 	  
-		public function cfb_encrypt($input, $key, $IV)
-		{			
-			$IO = new ioOperations();
-			// CFB Mode encryptie :
-			// $input is een array van state blokken.						
-			// Hoeveel blokken moeten we encrypten ?
-			$aantalBlokken = 0;
-			$aantalBlokken = count($input); // $input is een array van state blokken		
-			$_SESSION['debug'] .= "Aantal blokken input: ".$aantalBlokken."\n";
-			$endResult = array();
-			$result=array();			
-			/*
-			// Encryptie :			
-			// Stap 1: De IV moet vercijferd worden met de key :
-			$result = self::encrypt($IO->getState($IV),$key);
-			// Stap 2 : De output van de IV-vercijfering moet geXORed worden met Blok 1 Klare tekst			
-			$result = self::xorState($result,$input[0]);
-			$_SESSION['debug'] .= "Resultaat XOR van IV met M1: ".$result."\n";
-			$endResult[0] = $result; 						  				
-			// Stap 3 : Loop starten. Gebruik output van ieder blok om te XORen met volgende blok.
-			*/			
-			$result = $IO->getState($IV);
-			
-			for ($p = 0 ; $p < $aantalBlokken;$p++) 
-			{		
-				$result = self::encrypt($result,$key);
-				$result = self::xorState($result, $input[$p]);					
-				$endResult[$p] = $result;
-			}				
-			return $endResult; // array van CFB encrypted blokken		
+		public function cfb_encrypt($input, $key)
+		{
+			$_SESSION['debug'] = " not implemented yet\n"; 
 		}
 
-		public function cfb_decrypt($input,$key,$IV)
-		{			
-			$IO = new ioOperations();
-			// CFB Mode decryptie :
-			// $input is in dit geval een array van blokken van 128 bits groot (states).
-			$result = array();
-			$endResult = array();
-			$blokStore = array();
-			$aantalBlokken = count($input); 
-			
-			// Stap 1 CFB decryptie :
-			// ENCRYPTIE(!) van de IV :
-			$result = self::encrypt($IO->getState($IV),$key);
-			// Voer XOR uit met C1 en de encrypted IV :
-			$result = self::xorState($result,$input[0]);
-			// $result bevat nu het eerste blok klare tekst M1.
-			// aan array toevoegen van eindresultaat :
-			$endResult[0] = $result;			
-			// loop waarin C2 wordt encrypted en daarna geXORed met C3 etc :	
-						
-			for($i=1;$i<($aantalBlokken);$i++)
-			{		
-				$result = self::encrypt($input[$i-1],$key);							
-				$result = self::xorState($result,$input[($i)]);
-				$endResult[$i] = $result;
-			}
-			return $endResult;			
+		public function cfb_decrypt($input,$key)
+		{
+			$_SESSION['debug'] = " not implemented yet\n"; 
 		}
 	  
-	  public function ctr_encrypt($input,$key,$IV)
+	  public function ctr_encrypt($input,$key)
 	  {
-			$IO = new ioOperations();
-	  // Counter mode :
-		// Met iedere IV een int meegeven.
-		// XORen met de IV array lijkt een goed idee op het moment.
-			$endResult = array(); // Hier komt eindresultaat in van encrypted state blokken
-			$result=array();
-		// CTR Mode encryptie :
-			// $input is een array van state blokken.			
-			// maken teller :		
-			// Hoeveel blokken moeten we encrypten ?
-			$IVX = array();
-			$StateFromCounter = array();
-			$aantalBlokken = 0; // init.
-			$aantalBlokken = count($input); // $input is een array van state blokken
-			$counterMax = $aantalBlokken;
-			
-			// start loop:
-			for($i=0;$i<=$counterMax;$i++)
-			{			
-				// XOR IV met $counter :
-					$StateFromCounter = $IO->getState(dechex(($i+12345)));
-				//	$_SESSION['debug'] .= "Resultaat maken ByteArray van counter: ".$byteArrayFromCounter."\n";
-					$IVX = self::xorState($IO->getState($IV),$StateFromCounter);
-				//	$_SESSION['debug'] .= "Resultaat XOR ByteArray met counter: ".implode(",",$IVX)."\n";
-				// encrypt de geXORde counter met IV met de key:
-					$result = self::encrypt($IVX,$key);
-				// XOR bewerking klare tekst blok en encrypted IV(incl counter dus):
-					$result = self::xorState($result,$input[$i]);
-					$endResult[$i] = $result;
-			}					
-			return $endResult; // array van CFB encrypted blokken			
+		$_SESSION['debug'] = " not implemented yet\n"; 
 	  }
 	  
-	  public function ctr_decrypt($input,$key,$IV)
-	  {		
-			// CTR Mode decryptie : (is gelijk aan encryptie eigenlijk)
-			// XORen met de IV array lijkt een goed idee op het moment.
-			$endResult = array(); // Hier komt eindresultaat in van encrypted state blokken
-			$result=array();
-		// CTR Mode encryptie :
-			// $input is een array van state blokken.						
-			$IVX = array();
-			$StateFromCounter = array();
-			// maken teller :		
-			// Hoeveel blokken moeten we encrypten ?
-			$aantalBlokken = 0; // init.
-			$aantalBlokken = count($input); // $input is een array van state blokken
-			$counterMax = $aantalBlokken;
-			$IO = new ioOperations();
-			// start loop:
-			for($i=0;$i<$counterMax-1;$i++)
-			{			
-				// XOR IV met $counter :
-					$StateFromCounter = $IO->getState(dechex(($i+12345)));
-			//		$_SESSION['debug'] .= "Resultaat maken ByteArray van counter: ".$byteArrayFromCounter."\n";
-					$IVX = self::xorState($IO->getState($IV),$StateFromCounter);
-			//		$_SESSION['debug'] .= "Resultaat XOR IV met counter: ".implode(",",$IVX)."\n";
-				// encrypt de geXORde counter met IV met de key:
-					$result = self::encrypt($IVX,$key);
-				// XOR bewerking klare tekst blok en encrypted IV(incl counter dus):
-					$result = self::xorState($result,$input[$i]);
-					$endResult[$i] = $result;
-			}					
-			return $endResult; // array van CFB encrypted blokken	
+	  public function ctr_decrypt($input,$key)
+	  {
+		$_SESSION['debug'] = " not implemented yet\n"; 
 	  }
-	  	  
+	  
+	  
 	  public function subBytes($state)
       {
          for ($row=0; $row<4; $row++){ // for all 16 bytes in the (4x4-byte) State
             for ($column=0; $column<4; $column++){ // for all 16 bytes in the (4x4-byte) State
-               $_SESSION['debug'] .= "subBytes : state[$row][$column]=" . $state[$row][$column].   "-->" . self::$sBox[$state[$row][$column]]."\n";
+               $_SESSION['debug'] .= "subBytes : state[$row][$column]=" . $state[$row][$column] .
+                  "-->" . self::$sBox[$state[$row][$column]]."\n";
                $state[$row][$column] = self::$sBox[$state[$row][$column]];
             }
          }
          return $state;
       } // end function subBytes
 
-	public function invSubBytes($state)
-	{
+public function invSubBytes($state)
+{
          for ($row=0; $row<4; $row++){ // for all 16 bytes in the (4x4-byte) State
             for ($column=0; $column<4; $column++){ // for all 16 bytes in the (4x4-byte) State
                $_SESSION['debug'] .= "state na invSubBytes : state[$row][$column]=" . $state[$row][$column] .
@@ -616,13 +442,14 @@ private static $InvS_Box = array(
          for ($row=0; $row<4; $row++){
             for ($column=0; $column<4; $column++){
                $state[$row][$column] = $temp[$row][$column];
-              $_SESSION['debug'] .= "ShiftRows : state[$row][$column]=".$state[$row][$column]."\n";
+               $_SESSION['debug'] .= "ShiftRows : state[$row][$column]=".$state[$row][$column]."\n";
             }
          }
          return $state;
       } // end function shiftRows
 
-	public function invShiftRows($state)
+
+public function invShiftRows($state)
       {	
          $temp = array(); //create temporary array for shifting
          for ($row=0; $row<4; $row++){
@@ -641,6 +468,8 @@ private static $InvS_Box = array(
          }
          return $state;
       } // end function invShiftRows
+
+
 
       public static function mixColumns($state)
       {
@@ -692,12 +521,13 @@ private static $InvS_Box = array(
             $state[2][$c] = $a[0] ^ $a[1] ^ $mul2[$a[2]] ^ $mul3[$a[3]]; // a0 + a1 + 2*a2 + 3*a3
             $state[3][$c] = $mul3[$a[0]] ^ $a[1] ^ $a[2] ^ $mul2[$a[3]]; // 3*a0 + a1 + a2 + 2*a3
 
-           $_SESSION['debug'] .= "\nresulting column: ".$state[0][$c].",".$state[1][$c].",".$state[2][$c].",".$state[3][$c];
+            $_SESSION['debug'] .= "\nresulting column: ".$state[0][$c].",".$state[1][$c].",".$state[2][$c].",".$state[3][$c];
          }
          return $state;
       } // end function mixColumns
 
-	public static function invMixColumns($state)
+
+public static function invMixColumns($state)
       {
          //multiplication tables taken from http://en.wikipedia.org/wiki/Rijndael_mix_columns
          static $mul9 = array(
@@ -792,6 +622,7 @@ static $mul14 = array(
          return $state;
       } // end function mixColumns
 
+
       public function addRoundKey($state, $w, $rnd) // xor Round Key into state S [§5.1.4]
       {
          $_SESSION['debug'] .= "\naddRoundKey:\n";
@@ -799,11 +630,12 @@ static $mul14 = array(
             for ($c=0; $c<4; $c++){
                $_SESSION['debug'] .= "state[".$r."][".$c."]=".$state[$r][$c]." XOR ".$w[$rnd*4+$c][$r]."=";
                $state[$r][$c] ^= $w[$rnd*4+$c][$r];
-              $_SESSION['debug'] .= $state[$r][$c]."  In HEX: ".dechex($state[$r][$c])."\n";
+               $_SESSION['debug'] .= $state[$r][$c]."  In HEX: ".dechex($state[$r][$c])."\n";
             }
          }
          return $state;
       } // end function addRoundKey
+
 
       public static function keyExpansion($key) // generate Key Schedule from Key
       {
@@ -817,7 +649,7 @@ static $mul14 = array(
          for ($i=0; $i<$Nk; $i++) {
             $r = array($key[4*$i], $key[4*$i+1], $key[4*$i+2], $key[4*$i+3]);
             $w[$i] = $r;
-            $_SESSION['debug'] .= "w[".$i."]=";
+            //$_SESSION['debug'] .= "w[".$i."]=";
             for ($n=0; $n<4; $n++) $_SESSION['debug'] .= dechex($w[$i][$n])." ";
          }
          $_SESSION['debug'] .= "\nkey[1]=";
@@ -830,7 +662,7 @@ static $mul14 = array(
             } else if ($Nk > 6 && $i%$Nk == 4) {
             $temp = self::subWord($temp);
             }
-            $_SESSION['debug'] .= "w[".$i."]=";
+            //$_SESSION['debug'] .= "w[".$i."]=";
             for ($t=0; $t<4; $t++) {
                $w[$i][$t] = $w[$i-$Nk][$t] ^ $temp[$t];
                $_SESSION['debug'] .= dechex($w[$i][$t])." ";
@@ -839,6 +671,7 @@ static $mul14 = array(
          }
          return $w;
       }// end function keyExpansion
+
 
       private static function subWord($w) // apply SBox to 4-byte word w
       {
@@ -853,6 +686,33 @@ static $mul14 = array(
          $w[3] = $tmp;
          return $w;
       }
+      
+	  // getState staat er nu dubbel in maar heb hem hier nodig door poor design.
+	  // En om van de initialisatie vector een state te maken :
+	  
+	   public function getState($bytearray)
+      {
+         // let's convert the input to the state as done with the AES-input, 
+         // so first input-byte goes to state[0][0], second input-byte goes to state[1][0], etc 
+         $state =  array();  
+         $_SESSION['debug'] .= "\nThe input converted to a 4x4 state-array\n";
+         for ($i=0; $i<16; $i++)
+         {
+            //for example the input-byte 5 should go to state[1][1], so state[5%4][floor(5/4)]
+            $state[$i%4][floor($i/4)] = $bytearray[$i];  
+            //$_SESSION['debug'] .= "state[" . $i%4 . "][" . floor($i/4) . "]=" . $bytearray[$i] . "\n";
+         }
+
+         for ($row=0; $row<4; $row++) {
+            $_SESSION['debug'] .= "(";
+            for ($column=0; $column<4; $column++) {
+               $_SESSION['debug'] .= $state[$row][$column];
+               if ($column < 3) $_SESSION['debug'] .= ", ";
+            }
+            $_SESSION['debug'] .= ")\n";
+         }
+         return $state;
+      }
 	  
 	  public function xorState($state1, $state2)
 	  {
@@ -865,33 +725,6 @@ static $mul14 = array(
 			}
 		return $result;	  
 	  }
-	  
-	  /**
-	 * Fills the padding of $byteArray: adds zero's to the byteArray until the length of bytearray modulo 16 equals 0
-	 * @param array $byteArray
-	 * @return array $byteArray
-	 */
-	public function fillPadding($byteArray){
-		$ret = array();
-		$len = count($byteArray);
-
-		if($len % 16 == 0){
-			// padding is ok.
-			return $byteArray;
-		}else{
-			$amount = 16 - ($len % 16);
-		}
-		for($i = 0 ; $i < $amount ; $i++){
-			$ret[$i] = 0;
-		}
-		echo("padding_byteArray: ");
-		var_dump($byteArray);
-		echo("<br />");
-		echo("padding_ret");
-		var_dump($ret);
-		echo("<br />");
-		return array_merge($byteArray,$ret);
-	}
 	  
    } //end class AesSubBytes
 

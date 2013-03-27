@@ -1,7 +1,33 @@
+Start :
+The key string converted to a byte-array with the decimal representation of the keybytes:
+43,126,21,22,40,174,210,166,171,247,21,136,9,207,79,60
+
+input = 32 43 f6 a8 88 5a 30 8d 31 31 98 a2 e0 37 07 34
+
+The input converted to a byte-array with the decimal representation of the ascii-values:
+50,67,246,168,136,90,48,141,49,49,152,162,224,55,7,52
+
+Encrypted result :
+(57, 2, 220, 25)
+(37, 220, 17, 106)
+(132, 9, 133, 11)
+(29, 251, 151, 50)
+
+The result converted back to a linear decimal representation:
+57,37,132,29,2,220,9,251,220,17,133,151,25,106,11,50
+
+The hexadecimal result of the encrypt operation:
+39 25 84 1d 2 dc 9 fb dc 11 85 97 19 6a b 32 
+
+-------------------
+Decryptie :
+
 The key string converted to a byte-array with the decimal representation of the keybytes:
 43,126,21,22,40,174,210,166,171,247,21,136,9,207,79,60
 The input converted to a byte-array with the decimal representation of the ascii-values:
 57,37,132,29,45,201,251,220,17,133,151,25,106,179,2,0
+39,25,84, 1d,2d,
+
 
 The input converted to a 4x4 state-array
 (57, 45, 17, 106)

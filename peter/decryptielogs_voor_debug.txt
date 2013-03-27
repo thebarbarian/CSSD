@@ -1,0 +1,1576 @@
+The key string converted to a byte-array with the decimal representation of the keybytes:
+43,126,21,22,40,174,210,166,171,247,21,136,9,207,79,60
+Encryption mode: CBC
+The input converted to a byte-array with the decimal representation of the ascii-values:
+100,96,35,75,114,122,84,119,111,124,116,32,119,96,94,8,88,234,19,39,85,92,72,122,228,69,174,209,248,130,126,135,169,53,150,151,193,239,140,86,233,47,138,238,192,12,150,66,43,130,252,26,14,182,133,77,121,190,227,148,185,104,149,235,244,97,213,128,254,215,221,225,190,21,23,254,76,96,37,83,224,138,158,160,9,139,99,8,28,33,155,87,173,205,79,136,96,48,74,236,229,155,70,243,199,133,57,178,210,94,248,56,131,181,173,25,62,82,216,177,26,138,211,57,118,171,17,11,170,185,20,3,196,102,58,129,27,117,246,215,214,82,8,161,192,7,113,221,58,52,107,192,31,147,22,118,255,17,123,3,185,32,208,133,150,75,46,230,136,9,241,75,230,171,143,11,59,45,106,230,236,150,152,17,213,162,152,218,205,140,90,134,119,125,201,50,239,167,240,253,211,40,62,75,63,194,238,9,35,187,94,230,186,4,85,7,35,102,217,243,219,86,175,203,177,62,149,173,163,132,249,88,100,105,37,201,217,169,34,111,182,185,203,230,9,230,82,141,121,174,234,66,200,160,220,206,222,202,237,128,87,147,222,48,114,151,154,48,70,52,17,210,66,112,205,73,158,89,92,171,249,243,6,211,213,141,214,78
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(100, 114, 111, 119)
+(96, 122, 124, 96)
+(35, 84, 116, 94)
+(75, 119, 32, 8)
+
+getStates(!)-methode
+bytearray na padding: 100,96,35,75,114,122,84,119,111,124,116,32,119,96,94,8,88,234,19,39,85,92,72,122,228,69,174,209,248,130,126,135,169,53,150,151,193,239,140,86,233,47,138,238,192,12,150,66,43,130,252,26,14,182,133,77,121,190,227,148,185,104,149,235,244,97,213,128,254,215,221,225,190,21,23,254,76,96,37,83,224,138,158,160,9,139,99,8,28,33,155,87,173,205,79,136,96,48,74,236,229,155,70,243,199,133,57,178,210,94,248,56,131,181,173,25,62,82,216,177,26,138,211,57,118,171,17,11,170,185,20,3,196,102,58,129,27,117,246,215,214,82,8,161,192,7,113,221,58,52,107,192,31,147,22,118,255,17,123,3,185,32,208,133,150,75,46,230,136,9,241,75,230,171,143,11,59,45,106,230,236,150,152,17,213,162,152,218,205,140,90,134,119,125,201,50,239,167,240,253,211,40,62,75,63,194,238,9,35,187,94,230,186,4,85,7,35,102,217,243,219,86,175,203,177,62,149,173,163,132,249,88,100,105,37,201,217,169,34,111,182,185,203,230,9,230,82,141,121,174,234,66,200,160,220,206,222,202,237,128,87,147,222,48,114,151,154,48,70,52,17,210,66,112,205,73,158,89,92,171,249,243,6,211,213,141,214,78
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(100, 114, 111, 119)
+(96, 122, 124, 96)
+(35, 84, 116, 94)
+(75, 119, 32, 8)
+bloknr:0
+stateblok:100,96,35,75,114,122,84,119,111,124,116,32,119,96,94,8
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(88, 85, 228, 248)
+(234, 92, 69, 130)
+(19, 72, 174, 126)
+(39, 122, 209, 135)
+bloknr:1
+stateblok:88,234,19,39,85,92,72,122,228,69,174,209,248,130,126,135
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(169, 193, 233, 192)
+(53, 239, 47, 12)
+(150, 140, 138, 150)
+(151, 86, 238, 66)
+bloknr:2
+stateblok:169,53,150,151,193,239,140,86,233,47,138,238,192,12,150,66
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(43, 14, 121, 185)
+(130, 182, 190, 104)
+(252, 133, 227, 149)
+(26, 77, 148, 235)
+bloknr:3
+stateblok:43,130,252,26,14,182,133,77,121,190,227,148,185,104,149,235
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(244, 254, 190, 76)
+(97, 215, 21, 96)
+(213, 221, 23, 37)
+(128, 225, 254, 83)
+bloknr:4
+stateblok:244,97,213,128,254,215,221,225,190,21,23,254,76,96,37,83
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(224, 9, 28, 173)
+(138, 139, 33, 205)
+(158, 99, 155, 79)
+(160, 8, 87, 136)
+bloknr:5
+stateblok:224,138,158,160,9,139,99,8,28,33,155,87,173,205,79,136
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(96, 229, 199, 210)
+(48, 155, 133, 94)
+(74, 70, 57, 248)
+(236, 243, 178, 56)
+bloknr:6
+stateblok:96,48,74,236,229,155,70,243,199,133,57,178,210,94,248,56
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(131, 62, 26, 118)
+(181, 82, 138, 171)
+(173, 216, 211, 17)
+(25, 177, 57, 11)
+bloknr:7
+stateblok:131,181,173,25,62,82,216,177,26,138,211,57,118,171,17,11
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(170, 196, 27, 214)
+(185, 102, 117, 82)
+(20, 58, 246, 8)
+(3, 129, 215, 161)
+bloknr:8
+stateblok:170,185,20,3,196,102,58,129,27,117,246,215,214,82,8,161
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(192, 58, 31, 255)
+(7, 52, 147, 17)
+(113, 107, 22, 123)
+(221, 192, 118, 3)
+bloknr:9
+stateblok:192,7,113,221,58,52,107,192,31,147,22,118,255,17,123,3
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(185, 150, 136, 230)
+(32, 75, 9, 171)
+(208, 46, 241, 143)
+(133, 230, 75, 11)
+bloknr:10
+stateblok:185,32,208,133,150,75,46,230,136,9,241,75,230,171,143,11
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(59, 236, 213, 205)
+(45, 150, 162, 140)
+(106, 152, 152, 90)
+(230, 17, 218, 134)
+bloknr:11
+stateblok:59,45,106,230,236,150,152,17,213,162,152,218,205,140,90,134
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(119, 239, 211, 63)
+(125, 167, 40, 194)
+(201, 240, 62, 238)
+(50, 253, 75, 9)
+bloknr:12
+stateblok:119,125,201,50,239,167,240,253,211,40,62,75,63,194,238,9
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(35, 186, 35, 219)
+(187, 4, 102, 86)
+(94, 85, 217, 175)
+(230, 7, 243, 203)
+bloknr:13
+stateblok:35,187,94,230,186,4,85,7,35,102,217,243,219,86,175,203
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(177, 163, 100, 217)
+(62, 132, 105, 169)
+(149, 249, 37, 34)
+(173, 88, 201, 111)
+bloknr:14
+stateblok:177,62,149,173,163,132,249,88,100,105,37,201,217,169,34,111
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(182, 9, 121, 200)
+(185, 230, 174, 160)
+(203, 82, 234, 220)
+(230, 141, 66, 206)
+bloknr:15
+stateblok:182,185,203,230,9,230,82,141,121,174,234,66,200,160,220,206
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(222, 87, 114, 70)
+(202, 147, 151, 52)
+(237, 222, 154, 17)
+(128, 48, 48, 210)
+bloknr:16
+stateblok:222,202,237,128,87,147,222,48,114,151,154,48,70,52,17,210
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(66, 158, 249, 213)
+(112, 89, 243, 141)
+(205, 92, 6, 214)
+(73, 171, 211, 78)
+bloknr:17
+stateblok:66,112,205,73,158,89,92,171,249,243,6,211,213,141,214,78
+input heeft 18 state blokken
+inhoud bytearray: 100,96,35,75,114,122,84,119,111,124,116,32,119,96,94,8,88,234,19,39,85,92,72,122,228,69,174,209,248,130,126,135,169,53,150,151,193,239,140,86,233,47,138,238,192,12,150,66,43,130,252,26,14,182,133,77,121,190,227,148,185,104,149,235,244,97,213,128,254,215,221,225,190,21,23,254,76,96,37,83,224,138,158,160,9,139,99,8,28,33,155,87,173,205,79,136,96,48,74,236,229,155,70,243,199,133,57,178,210,94,248,56,131,181,173,25,62,82,216,177,26,138,211,57,118,171,17,11,170,185,20,3,196,102,58,129,27,117,246,215,214,82,8,161,192,7,113,221,58,52,107,192,31,147,22,118,255,17,123,3,185,32,208,133,150,75,46,230,136,9,241,75,230,171,143,11,59,45,106,230,236,150,152,17,213,162,152,218,205,140,90,134,119,125,201,50,239,167,240,253,211,40,62,75,63,194,238,9,35,187,94,230,186,4,85,7,35,102,217,243,219,86,175,203,177,62,149,173,163,132,249,88,100,105,37,201,217,169,34,111,182,185,203,230,9,230,82,141,121,174,234,66,200,160,220,206,222,202,237,128,87,147,222,48,114,151,154,48,70,52,17,210,66,112,205,73,158,89,92,171,249,243,6,211,213,141,214,78
+De IV als bytearray : 31,b5,9b,cc,dd,43,9e,36,5d,b9,31,95,8b,d,f0,9e
+
+getState-methode
+
+The input converted to a 4x4 state-array
+(31, dd, 5d, 8b)
+(b5, 43, b9, d)
+(9b, 9e, 31, f0)
+(cc, 36, 95, 9e)
+
+The decrypt operation:
+Mode = CBC
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]= XOR 0=0  In HEX: 0
+state[0][1]= XOR 99=99  In HEX: 63
+state[0][2]= XOR 251=251  In HEX: fb
+state[0][3]= XOR 15=15  In HEX: f
+state[1][0]= XOR 0=0  In HEX: 0
+state[1][1]= XOR 99=99  In HEX: 63
+state[1][2]= XOR 251=251  In HEX: fb
+state[1][3]= XOR 15=15  In HEX: f
+state[2][0]= XOR 0=0  In HEX: 0
+state[2][1]= XOR 99=99  In HEX: 63
+state[2][2]= XOR 251=251  In HEX: fb
+state[2][3]= XOR 15=15  In HEX: f
+state[3][0]= XOR 0=0  In HEX: 0
+state[3][1]= XOR 99=99  In HEX: 63
+state[3][2]= XOR 251=251  In HEX: fb
+state[3][3]= XOR 15=15  In HEX: f
+state after invShiftRows[0][0]=0 in HEX :0
+state after invShiftRows[0][1]=99 in HEX :63
+state after invShiftRows[0][2]=251 in HEX :fb
+state after invShiftRows[0][3]=15 in HEX :f
+state after invShiftRows[1][0]=15 in HEX :f
+state after invShiftRows[1][1]=0 in HEX :0
+state after invShiftRows[1][2]=99 in HEX :63
+state after invShiftRows[1][3]=251 in HEX :fb
+state after invShiftRows[2][0]=251 in HEX :fb
+state after invShiftRows[2][1]=15 in HEX :f
+state after invShiftRows[2][2]=0 in HEX :0
+state after invShiftRows[2][3]=99 in HEX :63
+state after invShiftRows[3][0]=99 in HEX :63
+state after invShiftRows[3][1]=251 in HEX :fb
+state after invShiftRows[3][2]=15 in HEX :f
+state after invShiftRows[3][3]=0 in HEX :0
+state na invSubBytes : state[0][0]=0-->82
+state na invSubBytes : state[0][1]=99-->0
+state na invSubBytes : state[0][2]=251-->99
+state na invSubBytes : state[0][3]=15-->251
+state na invSubBytes : state[1][0]=15-->251
+state na invSubBytes : state[1][1]=0-->82
+state na invSubBytes : state[1][2]=99-->0
+state na invSubBytes : state[1][3]=251-->99
+state na invSubBytes : state[2][0]=251-->99
+state na invSubBytes : state[2][1]=15-->251
+state na invSubBytes : state[2][2]=0-->82
+state na invSubBytes : state[2][3]=99-->0
+state na invSubBytes : state[3][0]=99-->0
+state na invSubBytes : state[3][1]=251-->99
+state na invSubBytes : state[3][2]=15-->251
+state na invSubBytes : state[3][3]=0-->82
+
+addRoundKey:
+state[0][0]=82 XOR 0=82  In HEX: 52
+state[0][1]=0 XOR 99=99  In HEX: 63
+state[0][2]=99 XOR 251=152  In HEX: 98
+state[0][3]=251 XOR 15=244  In HEX: f4
+state[1][0]=251 XOR 0=251  In HEX: fb
+state[1][1]=82 XOR 99=49  In HEX: 31
+state[1][2]=0 XOR 251=251  In HEX: fb
+state[1][3]=99 XOR 15=108  In HEX: 6c
+state[2][0]=99 XOR 0=99  In HEX: 63
+state[2][1]=251 XOR 99=152  In HEX: 98
+state[2][2]=82 XOR 251=169  In HEX: a9
+state[2][3]=0 XOR 15=15  In HEX: f
+state[3][0]=0 XOR 0=0  In HEX: 0
+state[3][1]=99 XOR 99=0  In HEX: 0
+state[3][2]=251 XOR 251=0  In HEX: 0
+state[3][3]=82 XOR 15=93  In HEX: 5d
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=88 XOR 0=88  In HEX: 58
+state[0][1]=85 XOR 99=54  In HEX: 36
+state[0][2]=228 XOR 251=31  In HEX: 1f
+state[0][3]=248 XOR 15=247  In HEX: f7
+state[1][0]=234 XOR 0=234  In HEX: ea
+state[1][1]=92 XOR 99=63  In HEX: 3f
+state[1][2]=69 XOR 251=190  In HEX: be
+state[1][3]=130 XOR 15=141  In HEX: 8d
+state[2][0]=19 XOR 0=19  In HEX: 13
+state[2][1]=72 XOR 99=43  In HEX: 2b
+state[2][2]=174 XOR 251=85  In HEX: 55
+state[2][3]=126 XOR 15=113  In HEX: 71
+state[3][0]=39 XOR 0=39  In HEX: 27
+state[3][1]=122 XOR 99=25  In HEX: 19
+state[3][2]=209 XOR 251=42  In HEX: 2a
+state[3][3]=135 XOR 15=136  In HEX: 88
+state after invShiftRows[0][0]=88 in HEX :58
+state after invShiftRows[0][1]=54 in HEX :36
+state after invShiftRows[0][2]=31 in HEX :1f
+state after invShiftRows[0][3]=247 in HEX :f7
+state after invShiftRows[1][0]=141 in HEX :8d
+state after invShiftRows[1][1]=234 in HEX :ea
+state after invShiftRows[1][2]=63 in HEX :3f
+state after invShiftRows[1][3]=190 in HEX :be
+state after invShiftRows[2][0]=85 in HEX :55
+state after invShiftRows[2][1]=113 in HEX :71
+state after invShiftRows[2][2]=19 in HEX :13
+state after invShiftRows[2][3]=43 in HEX :2b
+state after invShiftRows[3][0]=25 in HEX :19
+state after invShiftRows[3][1]=42 in HEX :2a
+state after invShiftRows[3][2]=136 in HEX :88
+state after invShiftRows[3][3]=39 in HEX :27
+state na invSubBytes : state[0][0]=88-->94
+state na invSubBytes : state[0][1]=54-->36
+state na invSubBytes : state[0][2]=31-->203
+state na invSubBytes : state[0][3]=247-->38
+state na invSubBytes : state[1][0]=141-->180
+state na invSubBytes : state[1][1]=234-->187
+state na invSubBytes : state[1][2]=63-->37
+state na invSubBytes : state[1][3]=190-->90
+state na invSubBytes : state[2][0]=85-->237
+state na invSubBytes : state[2][1]=113-->44
+state na invSubBytes : state[2][2]=19-->130
+state na invSubBytes : state[2][3]=43-->11
+state na invSubBytes : state[3][0]=25-->142
+state na invSubBytes : state[3][1]=42-->149
+state na invSubBytes : state[3][2]=136-->151
+state na invSubBytes : state[3][3]=39-->61
+
+addRoundKey:
+state[0][0]=94 XOR 0=94  In HEX: 5e
+state[0][1]=36 XOR 99=71  In HEX: 47
+state[0][2]=203 XOR 251=48  In HEX: 30
+state[0][3]=38 XOR 15=41  In HEX: 29
+state[1][0]=180 XOR 0=180  In HEX: b4
+state[1][1]=187 XOR 99=216  In HEX: d8
+state[1][2]=37 XOR 251=222  In HEX: de
+state[1][3]=90 XOR 15=85  In HEX: 55
+state[2][0]=237 XOR 0=237  In HEX: ed
+state[2][1]=44 XOR 99=79  In HEX: 4f
+state[2][2]=130 XOR 251=121  In HEX: 79
+state[2][3]=11 XOR 15=4  In HEX: 4
+state[3][0]=142 XOR 0=142  In HEX: 8e
+state[3][1]=149 XOR 99=246  In HEX: f6
+state[3][2]=151 XOR 251=108  In HEX: 6c
+state[3][3]=61 XOR 15=50  In HEX: 32
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=169 XOR 0=169  In HEX: a9
+state[0][1]=193 XOR 99=162  In HEX: a2
+state[0][2]=233 XOR 251=18  In HEX: 12
+state[0][3]=192 XOR 15=207  In HEX: cf
+state[1][0]=53 XOR 0=53  In HEX: 35
+state[1][1]=239 XOR 99=140  In HEX: 8c
+state[1][2]=47 XOR 251=212  In HEX: d4
+state[1][3]=12 XOR 15=3  In HEX: 3
+state[2][0]=150 XOR 0=150  In HEX: 96
+state[2][1]=140 XOR 99=239  In HEX: ef
+state[2][2]=138 XOR 251=113  In HEX: 71
+state[2][3]=150 XOR 15=153  In HEX: 99
+state[3][0]=151 XOR 0=151  In HEX: 97
+state[3][1]=86 XOR 99=53  In HEX: 35
+state[3][2]=238 XOR 251=21  In HEX: 15
+state[3][3]=66 XOR 15=77  In HEX: 4d
+state after invShiftRows[0][0]=169 in HEX :a9
+state after invShiftRows[0][1]=162 in HEX :a2
+state after invShiftRows[0][2]=18 in HEX :12
+state after invShiftRows[0][3]=207 in HEX :cf
+state after invShiftRows[1][0]=3 in HEX :3
+state after invShiftRows[1][1]=53 in HEX :35
+state after invShiftRows[1][2]=140 in HEX :8c
+state after invShiftRows[1][3]=212 in HEX :d4
+state after invShiftRows[2][0]=113 in HEX :71
+state after invShiftRows[2][1]=153 in HEX :99
+state after invShiftRows[2][2]=150 in HEX :96
+state after invShiftRows[2][3]=239 in HEX :ef
+state after invShiftRows[3][0]=53 in HEX :35
+state after invShiftRows[3][1]=21 in HEX :15
+state after invShiftRows[3][2]=77 in HEX :4d
+state after invShiftRows[3][3]=151 in HEX :97
+state na invSubBytes : state[0][0]=169-->183
+state na invSubBytes : state[0][1]=162-->26
+state na invSubBytes : state[0][2]=18-->57
+state na invSubBytes : state[0][3]=207-->95
+state na invSubBytes : state[1][0]=3-->213
+state na invSubBytes : state[1][1]=53-->217
+state na invSubBytes : state[1][2]=140-->240
+state na invSubBytes : state[1][3]=212-->25
+state na invSubBytes : state[2][0]=113-->44
+state na invSubBytes : state[2][1]=153-->249
+state na invSubBytes : state[2][2]=150-->53
+state na invSubBytes : state[2][3]=239-->97
+state na invSubBytes : state[3][0]=53-->217
+state na invSubBytes : state[3][1]=21-->47
+state na invSubBytes : state[3][2]=77-->101
+state na invSubBytes : state[3][3]=151-->133
+
+addRoundKey:
+state[0][0]=183 XOR 0=183  In HEX: b7
+state[0][1]=26 XOR 99=121  In HEX: 79
+state[0][2]=57 XOR 251=194  In HEX: c2
+state[0][3]=95 XOR 15=80  In HEX: 50
+state[1][0]=213 XOR 0=213  In HEX: d5
+state[1][1]=217 XOR 99=186  In HEX: ba
+state[1][2]=240 XOR 251=11  In HEX: b
+state[1][3]=25 XOR 15=22  In HEX: 16
+state[2][0]=44 XOR 0=44  In HEX: 2c
+state[2][1]=249 XOR 99=154  In HEX: 9a
+state[2][2]=53 XOR 251=206  In HEX: ce
+state[2][3]=97 XOR 15=110  In HEX: 6e
+state[3][0]=217 XOR 0=217  In HEX: d9
+state[3][1]=47 XOR 99=76  In HEX: 4c
+state[3][2]=101 XOR 251=158  In HEX: 9e
+state[3][3]=133 XOR 15=138  In HEX: 8a
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=43 XOR 0=43  In HEX: 2b
+state[0][1]=14 XOR 99=109  In HEX: 6d
+state[0][2]=121 XOR 251=130  In HEX: 82
+state[0][3]=185 XOR 15=182  In HEX: b6
+state[1][0]=130 XOR 0=130  In HEX: 82
+state[1][1]=182 XOR 99=213  In HEX: d5
+state[1][2]=190 XOR 251=69  In HEX: 45
+state[1][3]=104 XOR 15=103  In HEX: 67
+state[2][0]=252 XOR 0=252  In HEX: fc
+state[2][1]=133 XOR 99=230  In HEX: e6
+state[2][2]=227 XOR 251=24  In HEX: 18
+state[2][3]=149 XOR 15=154  In HEX: 9a
+state[3][0]=26 XOR 0=26  In HEX: 1a
+state[3][1]=77 XOR 99=46  In HEX: 2e
+state[3][2]=148 XOR 251=111  In HEX: 6f
+state[3][3]=235 XOR 15=228  In HEX: e4
+state after invShiftRows[0][0]=43 in HEX :2b
+state after invShiftRows[0][1]=109 in HEX :6d
+state after invShiftRows[0][2]=130 in HEX :82
+state after invShiftRows[0][3]=182 in HEX :b6
+state after invShiftRows[1][0]=103 in HEX :67
+state after invShiftRows[1][1]=130 in HEX :82
+state after invShiftRows[1][2]=213 in HEX :d5
+state after invShiftRows[1][3]=69 in HEX :45
+state after invShiftRows[2][0]=24 in HEX :18
+state after invShiftRows[2][1]=154 in HEX :9a
+state after invShiftRows[2][2]=252 in HEX :fc
+state after invShiftRows[2][3]=230 in HEX :e6
+state after invShiftRows[3][0]=46 in HEX :2e
+state after invShiftRows[3][1]=111 in HEX :6f
+state after invShiftRows[3][2]=228 in HEX :e4
+state after invShiftRows[3][3]=26 in HEX :1a
+state na invSubBytes : state[0][0]=43-->11
+state na invSubBytes : state[0][1]=109-->179
+state na invSubBytes : state[0][2]=130-->17
+state na invSubBytes : state[0][3]=182-->121
+state na invSubBytes : state[1][0]=103-->10
+state na invSubBytes : state[1][1]=130-->17
+state na invSubBytes : state[1][2]=213-->181
+state na invSubBytes : state[1][3]=69-->104
+state na invSubBytes : state[2][0]=24-->52
+state na invSubBytes : state[2][1]=154-->55
+state na invSubBytes : state[2][2]=252-->85
+state na invSubBytes : state[2][3]=230-->245
+state na invSubBytes : state[3][0]=46-->195
+state na invSubBytes : state[3][1]=111-->6
+state na invSubBytes : state[3][2]=228-->174
+state na invSubBytes : state[3][3]=26-->67
+
+addRoundKey:
+state[0][0]=11 XOR 0=11  In HEX: b
+state[0][1]=179 XOR 99=208  In HEX: d0
+state[0][2]=17 XOR 251=234  In HEX: ea
+state[0][3]=121 XOR 15=118  In HEX: 76
+state[1][0]=10 XOR 0=10  In HEX: a
+state[1][1]=17 XOR 99=114  In HEX: 72
+state[1][2]=181 XOR 251=78  In HEX: 4e
+state[1][3]=104 XOR 15=103  In HEX: 67
+state[2][0]=52 XOR 0=52  In HEX: 34
+state[2][1]=55 XOR 99=84  In HEX: 54
+state[2][2]=85 XOR 251=174  In HEX: ae
+state[2][3]=245 XOR 15=250  In HEX: fa
+state[3][0]=195 XOR 0=195  In HEX: c3
+state[3][1]=6 XOR 99=101  In HEX: 65
+state[3][2]=174 XOR 251=85  In HEX: 55
+state[3][3]=67 XOR 15=76  In HEX: 4c
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=244 XOR 0=244  In HEX: f4
+state[0][1]=254 XOR 99=157  In HEX: 9d
+state[0][2]=190 XOR 251=69  In HEX: 45
+state[0][3]=76 XOR 15=67  In HEX: 43
+state[1][0]=97 XOR 0=97  In HEX: 61
+state[1][1]=215 XOR 99=180  In HEX: b4
+state[1][2]=21 XOR 251=238  In HEX: ee
+state[1][3]=96 XOR 15=111  In HEX: 6f
+state[2][0]=213 XOR 0=213  In HEX: d5
+state[2][1]=221 XOR 99=190  In HEX: be
+state[2][2]=23 XOR 251=236  In HEX: ec
+state[2][3]=37 XOR 15=42  In HEX: 2a
+state[3][0]=128 XOR 0=128  In HEX: 80
+state[3][1]=225 XOR 99=130  In HEX: 82
+state[3][2]=254 XOR 251=5  In HEX: 5
+state[3][3]=83 XOR 15=92  In HEX: 5c
+state after invShiftRows[0][0]=244 in HEX :f4
+state after invShiftRows[0][1]=157 in HEX :9d
+state after invShiftRows[0][2]=69 in HEX :45
+state after invShiftRows[0][3]=67 in HEX :43
+state after invShiftRows[1][0]=111 in HEX :6f
+state after invShiftRows[1][1]=97 in HEX :61
+state after invShiftRows[1][2]=180 in HEX :b4
+state after invShiftRows[1][3]=238 in HEX :ee
+state after invShiftRows[2][0]=236 in HEX :ec
+state after invShiftRows[2][1]=42 in HEX :2a
+state after invShiftRows[2][2]=213 in HEX :d5
+state after invShiftRows[2][3]=190 in HEX :be
+state after invShiftRows[3][0]=130 in HEX :82
+state after invShiftRows[3][1]=5 in HEX :5
+state after invShiftRows[3][2]=92 in HEX :5c
+state after invShiftRows[3][3]=128 in HEX :80
+state na invSubBytes : state[0][0]=244-->186
+state na invSubBytes : state[0][1]=157-->117
+state na invSubBytes : state[0][2]=69-->104
+state na invSubBytes : state[0][3]=67-->100
+state na invSubBytes : state[1][0]=111-->6
+state na invSubBytes : state[1][1]=97-->216
+state na invSubBytes : state[1][2]=180-->198
+state na invSubBytes : state[1][3]=238-->153
+state na invSubBytes : state[2][0]=236-->131
+state na invSubBytes : state[2][1]=42-->149
+state na invSubBytes : state[2][2]=213-->181
+state na invSubBytes : state[2][3]=190-->90
+state na invSubBytes : state[3][0]=130-->17
+state na invSubBytes : state[3][1]=5-->54
+state na invSubBytes : state[3][2]=92-->167
+state na invSubBytes : state[3][3]=128-->58
+
+addRoundKey:
+state[0][0]=186 XOR 0=186  In HEX: ba
+state[0][1]=117 XOR 99=22  In HEX: 16
+state[0][2]=104 XOR 251=147  In HEX: 93
+state[0][3]=100 XOR 15=107  In HEX: 6b
+state[1][0]=6 XOR 0=6  In HEX: 6
+state[1][1]=216 XOR 99=187  In HEX: bb
+state[1][2]=198 XOR 251=61  In HEX: 3d
+state[1][3]=153 XOR 15=150  In HEX: 96
+state[2][0]=131 XOR 0=131  In HEX: 83
+state[2][1]=149 XOR 99=246  In HEX: f6
+state[2][2]=181 XOR 251=78  In HEX: 4e
+state[2][3]=90 XOR 15=85  In HEX: 55
+state[3][0]=17 XOR 0=17  In HEX: 11
+state[3][1]=54 XOR 99=85  In HEX: 55
+state[3][2]=167 XOR 251=92  In HEX: 5c
+state[3][3]=58 XOR 15=53  In HEX: 35
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=224 XOR 0=224  In HEX: e0
+state[0][1]=9 XOR 99=106  In HEX: 6a
+state[0][2]=28 XOR 251=231  In HEX: e7
+state[0][3]=173 XOR 15=162  In HEX: a2
+state[1][0]=138 XOR 0=138  In HEX: 8a
+state[1][1]=139 XOR 99=232  In HEX: e8
+state[1][2]=33 XOR 251=218  In HEX: da
+state[1][3]=205 XOR 15=194  In HEX: c2
+state[2][0]=158 XOR 0=158  In HEX: 9e
+state[2][1]=99 XOR 99=0  In HEX: 0
+state[2][2]=155 XOR 251=96  In HEX: 60
+state[2][3]=79 XOR 15=64  In HEX: 40
+state[3][0]=160 XOR 0=160  In HEX: a0
+state[3][1]=8 XOR 99=107  In HEX: 6b
+state[3][2]=87 XOR 251=172  In HEX: ac
+state[3][3]=136 XOR 15=135  In HEX: 87
+state after invShiftRows[0][0]=224 in HEX :e0
+state after invShiftRows[0][1]=106 in HEX :6a
+state after invShiftRows[0][2]=231 in HEX :e7
+state after invShiftRows[0][3]=162 in HEX :a2
+state after invShiftRows[1][0]=194 in HEX :c2
+state after invShiftRows[1][1]=138 in HEX :8a
+state after invShiftRows[1][2]=232 in HEX :e8
+state after invShiftRows[1][3]=218 in HEX :da
+state after invShiftRows[2][0]=96 in HEX :60
+state after invShiftRows[2][1]=64 in HEX :40
+state after invShiftRows[2][2]=158 in HEX :9e
+state after invShiftRows[2][3]=0 in HEX :0
+state after invShiftRows[3][0]=107 in HEX :6b
+state after invShiftRows[3][1]=172 in HEX :ac
+state after invShiftRows[3][2]=135 in HEX :87
+state after invShiftRows[3][3]=160 in HEX :a0
+state na invSubBytes : state[0][0]=224-->160
+state na invSubBytes : state[0][1]=106-->88
+state na invSubBytes : state[0][2]=231-->176
+state na invSubBytes : state[0][3]=162-->26
+state na invSubBytes : state[1][0]=194-->168
+state na invSubBytes : state[1][1]=138-->207
+state na invSubBytes : state[1][2]=232-->200
+state na invSubBytes : state[1][3]=218-->122
+state na invSubBytes : state[2][0]=96-->144
+state na invSubBytes : state[2][1]=64-->114
+state na invSubBytes : state[2][2]=158-->223
+state na invSubBytes : state[2][3]=0-->82
+state na invSubBytes : state[3][0]=107-->5
+state na invSubBytes : state[3][1]=172-->170
+state na invSubBytes : state[3][2]=135-->234
+state na invSubBytes : state[3][3]=160-->71
+
+addRoundKey:
+state[0][0]=160 XOR 0=160  In HEX: a0
+state[0][1]=88 XOR 99=59  In HEX: 3b
+state[0][2]=176 XOR 251=75  In HEX: 4b
+state[0][3]=26 XOR 15=21  In HEX: 15
+state[1][0]=168 XOR 0=168  In HEX: a8
+state[1][1]=207 XOR 99=172  In HEX: ac
+state[1][2]=200 XOR 251=51  In HEX: 33
+state[1][3]=122 XOR 15=117  In HEX: 75
+state[2][0]=144 XOR 0=144  In HEX: 90
+state[2][1]=114 XOR 99=17  In HEX: 11
+state[2][2]=223 XOR 251=36  In HEX: 24
+state[2][3]=82 XOR 15=93  In HEX: 5d
+state[3][0]=5 XOR 0=5  In HEX: 5
+state[3][1]=170 XOR 99=201  In HEX: c9
+state[3][2]=234 XOR 251=17  In HEX: 11
+state[3][3]=71 XOR 15=72  In HEX: 48
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=96 XOR 0=96  In HEX: 60
+state[0][1]=229 XOR 99=134  In HEX: 86
+state[0][2]=199 XOR 251=60  In HEX: 3c
+state[0][3]=210 XOR 15=221  In HEX: dd
+state[1][0]=48 XOR 0=48  In HEX: 30
+state[1][1]=155 XOR 99=248  In HEX: f8
+state[1][2]=133 XOR 251=126  In HEX: 7e
+state[1][3]=94 XOR 15=81  In HEX: 51
+state[2][0]=74 XOR 0=74  In HEX: 4a
+state[2][1]=70 XOR 99=37  In HEX: 25
+state[2][2]=57 XOR 251=194  In HEX: c2
+state[2][3]=248 XOR 15=247  In HEX: f7
+state[3][0]=236 XOR 0=236  In HEX: ec
+state[3][1]=243 XOR 99=144  In HEX: 90
+state[3][2]=178 XOR 251=73  In HEX: 49
+state[3][3]=56 XOR 15=55  In HEX: 37
+state after invShiftRows[0][0]=96 in HEX :60
+state after invShiftRows[0][1]=134 in HEX :86
+state after invShiftRows[0][2]=60 in HEX :3c
+state after invShiftRows[0][3]=221 in HEX :dd
+state after invShiftRows[1][0]=81 in HEX :51
+state after invShiftRows[1][1]=48 in HEX :30
+state after invShiftRows[1][2]=248 in HEX :f8
+state after invShiftRows[1][3]=126 in HEX :7e
+state after invShiftRows[2][0]=194 in HEX :c2
+state after invShiftRows[2][1]=247 in HEX :f7
+state after invShiftRows[2][2]=74 in HEX :4a
+state after invShiftRows[2][3]=37 in HEX :25
+state after invShiftRows[3][0]=144 in HEX :90
+state after invShiftRows[3][1]=73 in HEX :49
+state after invShiftRows[3][2]=55 in HEX :37
+state after invShiftRows[3][3]=236 in HEX :ec
+state na invSubBytes : state[0][0]=96-->144
+state na invSubBytes : state[0][1]=134-->220
+state na invSubBytes : state[0][2]=60-->109
+state na invSubBytes : state[0][3]=221-->201
+state na invSubBytes : state[1][0]=81-->112
+state na invSubBytes : state[1][1]=48-->8
+state na invSubBytes : state[1][2]=248-->225
+state na invSubBytes : state[1][3]=126-->138
+state na invSubBytes : state[2][0]=194-->168
+state na invSubBytes : state[2][1]=247-->38
+state na invSubBytes : state[2][2]=74-->92
+state na invSubBytes : state[2][3]=37-->194
+state na invSubBytes : state[3][0]=144-->150
+state na invSubBytes : state[3][1]=73-->164
+state na invSubBytes : state[3][2]=55-->178
+state na invSubBytes : state[3][3]=236-->131
+
+addRoundKey:
+state[0][0]=144 XOR 0=144  In HEX: 90
+state[0][1]=220 XOR 99=191  In HEX: bf
+state[0][2]=109 XOR 251=150  In HEX: 96
+state[0][3]=201 XOR 15=198  In HEX: c6
+state[1][0]=112 XOR 0=112  In HEX: 70
+state[1][1]=8 XOR 99=107  In HEX: 6b
+state[1][2]=225 XOR 251=26  In HEX: 1a
+state[1][3]=138 XOR 15=133  In HEX: 85
+state[2][0]=168 XOR 0=168  In HEX: a8
+state[2][1]=38 XOR 99=69  In HEX: 45
+state[2][2]=92 XOR 251=167  In HEX: a7
+state[2][3]=194 XOR 15=205  In HEX: cd
+state[3][0]=150 XOR 0=150  In HEX: 96
+state[3][1]=164 XOR 99=199  In HEX: c7
+state[3][2]=178 XOR 251=73  In HEX: 49
+state[3][3]=131 XOR 15=140  In HEX: 8c
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=131 XOR 0=131  In HEX: 83
+state[0][1]=62 XOR 99=93  In HEX: 5d
+state[0][2]=26 XOR 251=225  In HEX: e1
+state[0][3]=118 XOR 15=121  In HEX: 79
+state[1][0]=181 XOR 0=181  In HEX: b5
+state[1][1]=82 XOR 99=49  In HEX: 31
+state[1][2]=138 XOR 251=113  In HEX: 71
+state[1][3]=171 XOR 15=164  In HEX: a4
+state[2][0]=173 XOR 0=173  In HEX: ad
+state[2][1]=216 XOR 99=187  In HEX: bb
+state[2][2]=211 XOR 251=40  In HEX: 28
+state[2][3]=17 XOR 15=30  In HEX: 1e
+state[3][0]=25 XOR 0=25  In HEX: 19
+state[3][1]=177 XOR 99=210  In HEX: d2
+state[3][2]=57 XOR 251=194  In HEX: c2
+state[3][3]=11 XOR 15=4  In HEX: 4
+state after invShiftRows[0][0]=131 in HEX :83
+state after invShiftRows[0][1]=93 in HEX :5d
+state after invShiftRows[0][2]=225 in HEX :e1
+state after invShiftRows[0][3]=121 in HEX :79
+state after invShiftRows[1][0]=164 in HEX :a4
+state after invShiftRows[1][1]=181 in HEX :b5
+state after invShiftRows[1][2]=49 in HEX :31
+state after invShiftRows[1][3]=113 in HEX :71
+state after invShiftRows[2][0]=40 in HEX :28
+state after invShiftRows[2][1]=30 in HEX :1e
+state after invShiftRows[2][2]=173 in HEX :ad
+state after invShiftRows[2][3]=187 in HEX :bb
+state after invShiftRows[3][0]=210 in HEX :d2
+state after invShiftRows[3][1]=194 in HEX :c2
+state after invShiftRows[3][2]=4 in HEX :4
+state after invShiftRows[3][3]=25 in HEX :19
+state na invSubBytes : state[0][0]=131-->65
+state na invSubBytes : state[0][1]=93-->141
+state na invSubBytes : state[0][2]=225-->224
+state na invSubBytes : state[0][3]=121-->175
+state na invSubBytes : state[1][0]=164-->29
+state na invSubBytes : state[1][1]=181-->210
+state na invSubBytes : state[1][2]=49-->46
+state na invSubBytes : state[1][3]=113-->44
+state na invSubBytes : state[2][0]=40-->238
+state na invSubBytes : state[2][1]=30-->233
+state na invSubBytes : state[2][2]=173-->24
+state na invSubBytes : state[2][3]=187-->254
+state na invSubBytes : state[3][0]=210-->127
+state na invSubBytes : state[3][1]=194-->168
+state na invSubBytes : state[3][2]=4-->48
+state na invSubBytes : state[3][3]=25-->142
+
+addRoundKey:
+state[0][0]=65 XOR 0=65  In HEX: 41
+state[0][1]=141 XOR 99=238  In HEX: ee
+state[0][2]=224 XOR 251=27  In HEX: 1b
+state[0][3]=175 XOR 15=160  In HEX: a0
+state[1][0]=29 XOR 0=29  In HEX: 1d
+state[1][1]=210 XOR 99=177  In HEX: b1
+state[1][2]=46 XOR 251=213  In HEX: d5
+state[1][3]=44 XOR 15=35  In HEX: 23
+state[2][0]=238 XOR 0=238  In HEX: ee
+state[2][1]=233 XOR 99=138  In HEX: 8a
+state[2][2]=24 XOR 251=227  In HEX: e3
+state[2][3]=254 XOR 15=241  In HEX: f1
+state[3][0]=127 XOR 0=127  In HEX: 7f
+state[3][1]=168 XOR 99=203  In HEX: cb
+state[3][2]=48 XOR 251=203  In HEX: cb
+state[3][3]=142 XOR 15=129  In HEX: 81
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=170 XOR 0=170  In HEX: aa
+state[0][1]=196 XOR 99=167  In HEX: a7
+state[0][2]=27 XOR 251=224  In HEX: e0
+state[0][3]=214 XOR 15=217  In HEX: d9
+state[1][0]=185 XOR 0=185  In HEX: b9
+state[1][1]=102 XOR 99=5  In HEX: 5
+state[1][2]=117 XOR 251=142  In HEX: 8e
+state[1][3]=82 XOR 15=93  In HEX: 5d
+state[2][0]=20 XOR 0=20  In HEX: 14
+state[2][1]=58 XOR 99=89  In HEX: 59
+state[2][2]=246 XOR 251=13  In HEX: d
+state[2][3]=8 XOR 15=7  In HEX: 7
+state[3][0]=3 XOR 0=3  In HEX: 3
+state[3][1]=129 XOR 99=226  In HEX: e2
+state[3][2]=215 XOR 251=44  In HEX: 2c
+state[3][3]=161 XOR 15=174  In HEX: ae
+state after invShiftRows[0][0]=170 in HEX :aa
+state after invShiftRows[0][1]=167 in HEX :a7
+state after invShiftRows[0][2]=224 in HEX :e0
+state after invShiftRows[0][3]=217 in HEX :d9
+state after invShiftRows[1][0]=93 in HEX :5d
+state after invShiftRows[1][1]=185 in HEX :b9
+state after invShiftRows[1][2]=5 in HEX :5
+state after invShiftRows[1][3]=142 in HEX :8e
+state after invShiftRows[2][0]=13 in HEX :d
+state after invShiftRows[2][1]=7 in HEX :7
+state after invShiftRows[2][2]=20 in HEX :14
+state after invShiftRows[2][3]=89 in HEX :59
+state after invShiftRows[3][0]=226 in HEX :e2
+state after invShiftRows[3][1]=44 in HEX :2c
+state after invShiftRows[3][2]=174 in HEX :ae
+state after invShiftRows[3][3]=3 in HEX :3
+state na invSubBytes : state[0][0]=170-->98
+state na invSubBytes : state[0][1]=167-->137
+state na invSubBytes : state[0][2]=224-->160
+state na invSubBytes : state[0][3]=217-->229
+state na invSubBytes : state[1][0]=93-->141
+state na invSubBytes : state[1][1]=185-->219
+state na invSubBytes : state[1][2]=5-->54
+state na invSubBytes : state[1][3]=142-->230
+state na invSubBytes : state[2][0]=13-->243
+state na invSubBytes : state[2][1]=7-->56
+state na invSubBytes : state[2][2]=20-->155
+state na invSubBytes : state[2][3]=89-->21
+state na invSubBytes : state[3][0]=226-->59
+state na invSubBytes : state[3][1]=44-->66
+state na invSubBytes : state[3][2]=174-->190
+state na invSubBytes : state[3][3]=3-->213
+
+addRoundKey:
+state[0][0]=98 XOR 0=98  In HEX: 62
+state[0][1]=137 XOR 99=234  In HEX: ea
+state[0][2]=160 XOR 251=91  In HEX: 5b
+state[0][3]=229 XOR 15=234  In HEX: ea
+state[1][0]=141 XOR 0=141  In HEX: 8d
+state[1][1]=219 XOR 99=184  In HEX: b8
+state[1][2]=54 XOR 251=205  In HEX: cd
+state[1][3]=230 XOR 15=233  In HEX: e9
+state[2][0]=243 XOR 0=243  In HEX: f3
+state[2][1]=56 XOR 99=91  In HEX: 5b
+state[2][2]=155 XOR 251=96  In HEX: 60
+state[2][3]=21 XOR 15=26  In HEX: 1a
+state[3][0]=59 XOR 0=59  In HEX: 3b
+state[3][1]=66 XOR 99=33  In HEX: 21
+state[3][2]=190 XOR 251=69  In HEX: 45
+state[3][3]=213 XOR 15=218  In HEX: da
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=192 XOR 0=192  In HEX: c0
+state[0][1]=58 XOR 99=89  In HEX: 59
+state[0][2]=31 XOR 251=228  In HEX: e4
+state[0][3]=255 XOR 15=240  In HEX: f0
+state[1][0]=7 XOR 0=7  In HEX: 7
+state[1][1]=52 XOR 99=87  In HEX: 57
+state[1][2]=147 XOR 251=104  In HEX: 68
+state[1][3]=17 XOR 15=30  In HEX: 1e
+state[2][0]=113 XOR 0=113  In HEX: 71
+state[2][1]=107 XOR 99=8  In HEX: 8
+state[2][2]=22 XOR 251=237  In HEX: ed
+state[2][3]=123 XOR 15=116  In HEX: 74
+state[3][0]=221 XOR 0=221  In HEX: dd
+state[3][1]=192 XOR 99=163  In HEX: a3
+state[3][2]=118 XOR 251=141  In HEX: 8d
+state[3][3]=3 XOR 15=12  In HEX: c
+state after invShiftRows[0][0]=192 in HEX :c0
+state after invShiftRows[0][1]=89 in HEX :59
+state after invShiftRows[0][2]=228 in HEX :e4
+state after invShiftRows[0][3]=240 in HEX :f0
+state after invShiftRows[1][0]=30 in HEX :1e
+state after invShiftRows[1][1]=7 in HEX :7
+state after invShiftRows[1][2]=87 in HEX :57
+state after invShiftRows[1][3]=104 in HEX :68
+state after invShiftRows[2][0]=237 in HEX :ed
+state after invShiftRows[2][1]=116 in HEX :74
+state after invShiftRows[2][2]=113 in HEX :71
+state after invShiftRows[2][3]=8 in HEX :8
+state after invShiftRows[3][0]=163 in HEX :a3
+state after invShiftRows[3][1]=141 in HEX :8d
+state after invShiftRows[3][2]=12 in HEX :c
+state after invShiftRows[3][3]=221 in HEX :dd
+state na invSubBytes : state[0][0]=192-->31
+state na invSubBytes : state[0][1]=89-->21
+state na invSubBytes : state[0][2]=228-->174
+state na invSubBytes : state[0][3]=240-->23
+state na invSubBytes : state[1][0]=30-->233
+state na invSubBytes : state[1][1]=7-->56
+state na invSubBytes : state[1][2]=87-->218
+state na invSubBytes : state[1][3]=104-->247
+state na invSubBytes : state[2][0]=237-->83
+state na invSubBytes : state[2][1]=116-->202
+state na invSubBytes : state[2][2]=113-->44
+state na invSubBytes : state[2][3]=8-->191
+state na invSubBytes : state[3][0]=163-->113
+state na invSubBytes : state[3][1]=141-->180
+state na invSubBytes : state[3][2]=12-->129
+state na invSubBytes : state[3][3]=221-->201
+
+addRoundKey:
+state[0][0]=31 XOR 0=31  In HEX: 1f
+state[0][1]=21 XOR 99=118  In HEX: 76
+state[0][2]=174 XOR 251=85  In HEX: 55
+state[0][3]=23 XOR 15=24  In HEX: 18
+state[1][0]=233 XOR 0=233  In HEX: e9
+state[1][1]=56 XOR 99=91  In HEX: 5b
+state[1][2]=218 XOR 251=33  In HEX: 21
+state[1][3]=247 XOR 15=248  In HEX: f8
+state[2][0]=83 XOR 0=83  In HEX: 53
+state[2][1]=202 XOR 99=169  In HEX: a9
+state[2][2]=44 XOR 251=215  In HEX: d7
+state[2][3]=191 XOR 15=176  In HEX: b0
+state[3][0]=113 XOR 0=113  In HEX: 71
+state[3][1]=180 XOR 99=215  In HEX: d7
+state[3][2]=129 XOR 251=122  In HEX: 7a
+state[3][3]=201 XOR 15=198  In HEX: c6
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=185 XOR 0=185  In HEX: b9
+state[0][1]=150 XOR 99=245  In HEX: f5
+state[0][2]=136 XOR 251=115  In HEX: 73
+state[0][3]=230 XOR 15=233  In HEX: e9
+state[1][0]=32 XOR 0=32  In HEX: 20
+state[1][1]=75 XOR 99=40  In HEX: 28
+state[1][2]=9 XOR 251=242  In HEX: f2
+state[1][3]=171 XOR 15=164  In HEX: a4
+state[2][0]=208 XOR 0=208  In HEX: d0
+state[2][1]=46 XOR 99=77  In HEX: 4d
+state[2][2]=241 XOR 251=10  In HEX: a
+state[2][3]=143 XOR 15=128  In HEX: 80
+state[3][0]=133 XOR 0=133  In HEX: 85
+state[3][1]=230 XOR 99=133  In HEX: 85
+state[3][2]=75 XOR 251=176  In HEX: b0
+state[3][3]=11 XOR 15=4  In HEX: 4
+state after invShiftRows[0][0]=185 in HEX :b9
+state after invShiftRows[0][1]=245 in HEX :f5
+state after invShiftRows[0][2]=115 in HEX :73
+state after invShiftRows[0][3]=233 in HEX :e9
+state after invShiftRows[1][0]=164 in HEX :a4
+state after invShiftRows[1][1]=32 in HEX :20
+state after invShiftRows[1][2]=40 in HEX :28
+state after invShiftRows[1][3]=242 in HEX :f2
+state after invShiftRows[2][0]=10 in HEX :a
+state after invShiftRows[2][1]=128 in HEX :80
+state after invShiftRows[2][2]=208 in HEX :d0
+state after invShiftRows[2][3]=77 in HEX :4d
+state after invShiftRows[3][0]=133 in HEX :85
+state after invShiftRows[3][1]=176 in HEX :b0
+state after invShiftRows[3][2]=4 in HEX :4
+state after invShiftRows[3][3]=133 in HEX :85
+state na invSubBytes : state[0][0]=185-->219
+state na invSubBytes : state[0][1]=245-->119
+state na invSubBytes : state[0][2]=115-->143
+state na invSubBytes : state[0][3]=233-->235
+state na invSubBytes : state[1][0]=164-->29
+state na invSubBytes : state[1][1]=32-->84
+state na invSubBytes : state[1][2]=40-->238
+state na invSubBytes : state[1][3]=242-->4
+state na invSubBytes : state[2][0]=10-->163
+state na invSubBytes : state[2][1]=128-->58
+state na invSubBytes : state[2][2]=208-->96
+state na invSubBytes : state[2][3]=77-->101
+state na invSubBytes : state[3][0]=133-->103
+state na invSubBytes : state[3][1]=176-->252
+state na invSubBytes : state[3][2]=4-->48
+state na invSubBytes : state[3][3]=133-->103
+
+addRoundKey:
+state[0][0]=219 XOR 0=219  In HEX: db
+state[0][1]=119 XOR 99=20  In HEX: 14
+state[0][2]=143 XOR 251=116  In HEX: 74
+state[0][3]=235 XOR 15=228  In HEX: e4
+state[1][0]=29 XOR 0=29  In HEX: 1d
+state[1][1]=84 XOR 99=55  In HEX: 37
+state[1][2]=238 XOR 251=21  In HEX: 15
+state[1][3]=4 XOR 15=11  In HEX: b
+state[2][0]=163 XOR 0=163  In HEX: a3
+state[2][1]=58 XOR 99=89  In HEX: 59
+state[2][2]=96 XOR 251=155  In HEX: 9b
+state[2][3]=101 XOR 15=106  In HEX: 6a
+state[3][0]=103 XOR 0=103  In HEX: 67
+state[3][1]=252 XOR 99=159  In HEX: 9f
+state[3][2]=48 XOR 251=203  In HEX: cb
+state[3][3]=103 XOR 15=104  In HEX: 68
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=59 XOR 0=59  In HEX: 3b
+state[0][1]=236 XOR 99=143  In HEX: 8f
+state[0][2]=213 XOR 251=46  In HEX: 2e
+state[0][3]=205 XOR 15=194  In HEX: c2
+state[1][0]=45 XOR 0=45  In HEX: 2d
+state[1][1]=150 XOR 99=245  In HEX: f5
+state[1][2]=162 XOR 251=89  In HEX: 59
+state[1][3]=140 XOR 15=131  In HEX: 83
+state[2][0]=106 XOR 0=106  In HEX: 6a
+state[2][1]=152 XOR 99=251  In HEX: fb
+state[2][2]=152 XOR 251=99  In HEX: 63
+state[2][3]=90 XOR 15=85  In HEX: 55
+state[3][0]=230 XOR 0=230  In HEX: e6
+state[3][1]=17 XOR 99=114  In HEX: 72
+state[3][2]=218 XOR 251=33  In HEX: 21
+state[3][3]=134 XOR 15=137  In HEX: 89
+state after invShiftRows[0][0]=59 in HEX :3b
+state after invShiftRows[0][1]=143 in HEX :8f
+state after invShiftRows[0][2]=46 in HEX :2e
+state after invShiftRows[0][3]=194 in HEX :c2
+state after invShiftRows[1][0]=131 in HEX :83
+state after invShiftRows[1][1]=45 in HEX :2d
+state after invShiftRows[1][2]=245 in HEX :f5
+state after invShiftRows[1][3]=89 in HEX :59
+state after invShiftRows[2][0]=99 in HEX :63
+state after invShiftRows[2][1]=85 in HEX :55
+state after invShiftRows[2][2]=106 in HEX :6a
+state after invShiftRows[2][3]=251 in HEX :fb
+state after invShiftRows[3][0]=114 in HEX :72
+state after invShiftRows[3][1]=33 in HEX :21
+state after invShiftRows[3][2]=137 in HEX :89
+state after invShiftRows[3][3]=230 in HEX :e6
+state na invSubBytes : state[0][0]=59-->73
+state na invSubBytes : state[0][1]=143-->115
+state na invSubBytes : state[0][2]=46-->195
+state na invSubBytes : state[0][3]=194-->168
+state na invSubBytes : state[1][0]=131-->65
+state na invSubBytes : state[1][1]=45-->250
+state na invSubBytes : state[1][2]=245-->119
+state na invSubBytes : state[1][3]=89-->21
+state na invSubBytes : state[2][0]=99-->0
+state na invSubBytes : state[2][1]=85-->237
+state na invSubBytes : state[2][2]=106-->88
+state na invSubBytes : state[2][3]=251-->99
+state na invSubBytes : state[3][0]=114-->30
+state na invSubBytes : state[3][1]=33-->123
+state na invSubBytes : state[3][2]=137-->242
+state na invSubBytes : state[3][3]=230-->245
+
+addRoundKey:
+state[0][0]=73 XOR 0=73  In HEX: 49
+state[0][1]=115 XOR 99=16  In HEX: 10
+state[0][2]=195 XOR 251=56  In HEX: 38
+state[0][3]=168 XOR 15=167  In HEX: a7
+state[1][0]=65 XOR 0=65  In HEX: 41
+state[1][1]=250 XOR 99=153  In HEX: 99
+state[1][2]=119 XOR 251=140  In HEX: 8c
+state[1][3]=21 XOR 15=26  In HEX: 1a
+state[2][0]=0 XOR 0=0  In HEX: 0
+state[2][1]=237 XOR 99=142  In HEX: 8e
+state[2][2]=88 XOR 251=163  In HEX: a3
+state[2][3]=99 XOR 15=108  In HEX: 6c
+state[3][0]=30 XOR 0=30  In HEX: 1e
+state[3][1]=123 XOR 99=24  In HEX: 18
+state[3][2]=242 XOR 251=9  In HEX: 9
+state[3][3]=245 XOR 15=250  In HEX: fa
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=119 XOR 0=119  In HEX: 77
+state[0][1]=239 XOR 99=140  In HEX: 8c
+state[0][2]=211 XOR 251=40  In HEX: 28
+state[0][3]=63 XOR 15=48  In HEX: 30
+state[1][0]=125 XOR 0=125  In HEX: 7d
+state[1][1]=167 XOR 99=196  In HEX: c4
+state[1][2]=40 XOR 251=211  In HEX: d3
+state[1][3]=194 XOR 15=205  In HEX: cd
+state[2][0]=201 XOR 0=201  In HEX: c9
+state[2][1]=240 XOR 99=147  In HEX: 93
+state[2][2]=62 XOR 251=197  In HEX: c5
+state[2][3]=238 XOR 15=225  In HEX: e1
+state[3][0]=50 XOR 0=50  In HEX: 32
+state[3][1]=253 XOR 99=158  In HEX: 9e
+state[3][2]=75 XOR 251=176  In HEX: b0
+state[3][3]=9 XOR 15=6  In HEX: 6
+state after invShiftRows[0][0]=119 in HEX :77
+state after invShiftRows[0][1]=140 in HEX :8c
+state after invShiftRows[0][2]=40 in HEX :28
+state after invShiftRows[0][3]=48 in HEX :30
+state after invShiftRows[1][0]=205 in HEX :cd
+state after invShiftRows[1][1]=125 in HEX :7d
+state after invShiftRows[1][2]=196 in HEX :c4
+state after invShiftRows[1][3]=211 in HEX :d3
+state after invShiftRows[2][0]=197 in HEX :c5
+state after invShiftRows[2][1]=225 in HEX :e1
+state after invShiftRows[2][2]=201 in HEX :c9
+state after invShiftRows[2][3]=147 in HEX :93
+state after invShiftRows[3][0]=158 in HEX :9e
+state after invShiftRows[3][1]=176 in HEX :b0
+state after invShiftRows[3][2]=6 in HEX :6
+state after invShiftRows[3][3]=50 in HEX :32
+state na invSubBytes : state[0][0]=119-->2
+state na invSubBytes : state[0][1]=140-->240
+state na invSubBytes : state[0][2]=40-->238
+state na invSubBytes : state[0][3]=48-->8
+state na invSubBytes : state[1][0]=205-->128
+state na invSubBytes : state[1][1]=125-->19
+state na invSubBytes : state[1][2]=196-->136
+state na invSubBytes : state[1][3]=211-->169
+state na invSubBytes : state[2][0]=197-->7
+state na invSubBytes : state[2][1]=225-->224
+state na invSubBytes : state[2][2]=201-->18
+state na invSubBytes : state[2][3]=147-->34
+state na invSubBytes : state[3][0]=158-->223
+state na invSubBytes : state[3][1]=176-->252
+state na invSubBytes : state[3][2]=6-->165
+state na invSubBytes : state[3][3]=50-->161
+
+addRoundKey:
+state[0][0]=2 XOR 0=2  In HEX: 2
+state[0][1]=240 XOR 99=147  In HEX: 93
+state[0][2]=238 XOR 251=21  In HEX: 15
+state[0][3]=8 XOR 15=7  In HEX: 7
+state[1][0]=128 XOR 0=128  In HEX: 80
+state[1][1]=19 XOR 99=112  In HEX: 70
+state[1][2]=136 XOR 251=115  In HEX: 73
+state[1][3]=169 XOR 15=166  In HEX: a6
+state[2][0]=7 XOR 0=7  In HEX: 7
+state[2][1]=224 XOR 99=131  In HEX: 83
+state[2][2]=18 XOR 251=233  In HEX: e9
+state[2][3]=34 XOR 15=45  In HEX: 2d
+state[3][0]=223 XOR 0=223  In HEX: df
+state[3][1]=252 XOR 99=159  In HEX: 9f
+state[3][2]=165 XOR 251=94  In HEX: 5e
+state[3][3]=161 XOR 15=174  In HEX: ae
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=35 XOR 0=35  In HEX: 23
+state[0][1]=186 XOR 99=217  In HEX: d9
+state[0][2]=35 XOR 251=216  In HEX: d8
+state[0][3]=219 XOR 15=212  In HEX: d4
+state[1][0]=187 XOR 0=187  In HEX: bb
+state[1][1]=4 XOR 99=103  In HEX: 67
+state[1][2]=102 XOR 251=157  In HEX: 9d
+state[1][3]=86 XOR 15=89  In HEX: 59
+state[2][0]=94 XOR 0=94  In HEX: 5e
+state[2][1]=85 XOR 99=54  In HEX: 36
+state[2][2]=217 XOR 251=34  In HEX: 22
+state[2][3]=175 XOR 15=160  In HEX: a0
+state[3][0]=230 XOR 0=230  In HEX: e6
+state[3][1]=7 XOR 99=100  In HEX: 64
+state[3][2]=243 XOR 251=8  In HEX: 8
+state[3][3]=203 XOR 15=196  In HEX: c4
+state after invShiftRows[0][0]=35 in HEX :23
+state after invShiftRows[0][1]=217 in HEX :d9
+state after invShiftRows[0][2]=216 in HEX :d8
+state after invShiftRows[0][3]=212 in HEX :d4
+state after invShiftRows[1][0]=89 in HEX :59
+state after invShiftRows[1][1]=187 in HEX :bb
+state after invShiftRows[1][2]=103 in HEX :67
+state after invShiftRows[1][3]=157 in HEX :9d
+state after invShiftRows[2][0]=34 in HEX :22
+state after invShiftRows[2][1]=160 in HEX :a0
+state after invShiftRows[2][2]=94 in HEX :5e
+state after invShiftRows[2][3]=54 in HEX :36
+state after invShiftRows[3][0]=100 in HEX :64
+state after invShiftRows[3][1]=8 in HEX :8
+state after invShiftRows[3][2]=196 in HEX :c4
+state after invShiftRows[3][3]=230 in HEX :e6
+state na invSubBytes : state[0][0]=35-->50
+state na invSubBytes : state[0][1]=217-->229
+state na invSubBytes : state[0][2]=216-->45
+state na invSubBytes : state[0][3]=212-->25
+state na invSubBytes : state[1][0]=89-->21
+state na invSubBytes : state[1][1]=187-->254
+state na invSubBytes : state[1][2]=103-->10
+state na invSubBytes : state[1][3]=157-->117
+state na invSubBytes : state[2][0]=34-->148
+state na invSubBytes : state[2][1]=160-->71
+state na invSubBytes : state[2][2]=94-->157
+state na invSubBytes : state[2][3]=54-->36
+state na invSubBytes : state[3][0]=100-->140
+state na invSubBytes : state[3][1]=8-->191
+state na invSubBytes : state[3][2]=196-->136
+state na invSubBytes : state[3][3]=230-->245
+
+addRoundKey:
+state[0][0]=50 XOR 0=50  In HEX: 32
+state[0][1]=229 XOR 99=134  In HEX: 86
+state[0][2]=45 XOR 251=214  In HEX: d6
+state[0][3]=25 XOR 15=22  In HEX: 16
+state[1][0]=21 XOR 0=21  In HEX: 15
+state[1][1]=254 XOR 99=157  In HEX: 9d
+state[1][2]=10 XOR 251=241  In HEX: f1
+state[1][3]=117 XOR 15=122  In HEX: 7a
+state[2][0]=148 XOR 0=148  In HEX: 94
+state[2][1]=71 XOR 99=36  In HEX: 24
+state[2][2]=157 XOR 251=102  In HEX: 66
+state[2][3]=36 XOR 15=43  In HEX: 2b
+state[3][0]=140 XOR 0=140  In HEX: 8c
+state[3][1]=191 XOR 99=220  In HEX: dc
+state[3][2]=136 XOR 251=115  In HEX: 73
+state[3][3]=245 XOR 15=250  In HEX: fa
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=177 XOR 0=177  In HEX: b1
+state[0][1]=163 XOR 99=192  In HEX: c0
+state[0][2]=100 XOR 251=159  In HEX: 9f
+state[0][3]=217 XOR 15=214  In HEX: d6
+state[1][0]=62 XOR 0=62  In HEX: 3e
+state[1][1]=132 XOR 99=231  In HEX: e7
+state[1][2]=105 XOR 251=146  In HEX: 92
+state[1][3]=169 XOR 15=166  In HEX: a6
+state[2][0]=149 XOR 0=149  In HEX: 95
+state[2][1]=249 XOR 99=154  In HEX: 9a
+state[2][2]=37 XOR 251=222  In HEX: de
+state[2][3]=34 XOR 15=45  In HEX: 2d
+state[3][0]=173 XOR 0=173  In HEX: ad
+state[3][1]=88 XOR 99=59  In HEX: 3b
+state[3][2]=201 XOR 251=50  In HEX: 32
+state[3][3]=111 XOR 15=96  In HEX: 60
+state after invShiftRows[0][0]=177 in HEX :b1
+state after invShiftRows[0][1]=192 in HEX :c0
+state after invShiftRows[0][2]=159 in HEX :9f
+state after invShiftRows[0][3]=214 in HEX :d6
+state after invShiftRows[1][0]=166 in HEX :a6
+state after invShiftRows[1][1]=62 in HEX :3e
+state after invShiftRows[1][2]=231 in HEX :e7
+state after invShiftRows[1][3]=146 in HEX :92
+state after invShiftRows[2][0]=222 in HEX :de
+state after invShiftRows[2][1]=45 in HEX :2d
+state after invShiftRows[2][2]=149 in HEX :95
+state after invShiftRows[2][3]=154 in HEX :9a
+state after invShiftRows[3][0]=59 in HEX :3b
+state after invShiftRows[3][1]=50 in HEX :32
+state after invShiftRows[3][2]=96 in HEX :60
+state after invShiftRows[3][3]=173 in HEX :ad
+state na invSubBytes : state[0][0]=177-->86
+state na invSubBytes : state[0][1]=192-->31
+state na invSubBytes : state[0][2]=159-->110
+state na invSubBytes : state[0][3]=214-->74
+state na invSubBytes : state[1][0]=166-->197
+state na invSubBytes : state[1][1]=62-->209
+state na invSubBytes : state[1][2]=231-->176
+state na invSubBytes : state[1][3]=146-->116
+state na invSubBytes : state[2][0]=222-->156
+state na invSubBytes : state[2][1]=45-->250
+state na invSubBytes : state[2][2]=149-->173
+state na invSubBytes : state[2][3]=154-->55
+state na invSubBytes : state[3][0]=59-->73
+state na invSubBytes : state[3][1]=50-->161
+state na invSubBytes : state[3][2]=96-->144
+state na invSubBytes : state[3][3]=173-->24
+
+addRoundKey:
+state[0][0]=86 XOR 0=86  In HEX: 56
+state[0][1]=31 XOR 99=124  In HEX: 7c
+state[0][2]=110 XOR 251=149  In HEX: 95
+state[0][3]=74 XOR 15=69  In HEX: 45
+state[1][0]=197 XOR 0=197  In HEX: c5
+state[1][1]=209 XOR 99=178  In HEX: b2
+state[1][2]=176 XOR 251=75  In HEX: 4b
+state[1][3]=116 XOR 15=123  In HEX: 7b
+state[2][0]=156 XOR 0=156  In HEX: 9c
+state[2][1]=250 XOR 99=153  In HEX: 99
+state[2][2]=173 XOR 251=86  In HEX: 56
+state[2][3]=55 XOR 15=56  In HEX: 38
+state[3][0]=73 XOR 0=73  In HEX: 49
+state[3][1]=161 XOR 99=194  In HEX: c2
+state[3][2]=144 XOR 251=107  In HEX: 6b
+state[3][3]=24 XOR 15=23  In HEX: 17
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=182 XOR 0=182  In HEX: b6
+state[0][1]=9 XOR 99=106  In HEX: 6a
+state[0][2]=121 XOR 251=130  In HEX: 82
+state[0][3]=200 XOR 15=199  In HEX: c7
+state[1][0]=185 XOR 0=185  In HEX: b9
+state[1][1]=230 XOR 99=133  In HEX: 85
+state[1][2]=174 XOR 251=85  In HEX: 55
+state[1][3]=160 XOR 15=175  In HEX: af
+state[2][0]=203 XOR 0=203  In HEX: cb
+state[2][1]=82 XOR 99=49  In HEX: 31
+state[2][2]=234 XOR 251=17  In HEX: 11
+state[2][3]=220 XOR 15=211  In HEX: d3
+state[3][0]=230 XOR 0=230  In HEX: e6
+state[3][1]=141 XOR 99=238  In HEX: ee
+state[3][2]=66 XOR 251=185  In HEX: b9
+state[3][3]=206 XOR 15=193  In HEX: c1
+state after invShiftRows[0][0]=182 in HEX :b6
+state after invShiftRows[0][1]=106 in HEX :6a
+state after invShiftRows[0][2]=130 in HEX :82
+state after invShiftRows[0][3]=199 in HEX :c7
+state after invShiftRows[1][0]=175 in HEX :af
+state after invShiftRows[1][1]=185 in HEX :b9
+state after invShiftRows[1][2]=133 in HEX :85
+state after invShiftRows[1][3]=85 in HEX :55
+state after invShiftRows[2][0]=17 in HEX :11
+state after invShiftRows[2][1]=211 in HEX :d3
+state after invShiftRows[2][2]=203 in HEX :cb
+state after invShiftRows[2][3]=49 in HEX :31
+state after invShiftRows[3][0]=238 in HEX :ee
+state after invShiftRows[3][1]=185 in HEX :b9
+state after invShiftRows[3][2]=193 in HEX :c1
+state after invShiftRows[3][3]=230 in HEX :e6
+state na invSubBytes : state[0][0]=182-->121
+state na invSubBytes : state[0][1]=106-->88
+state na invSubBytes : state[0][2]=130-->17
+state na invSubBytes : state[0][3]=199-->49
+state na invSubBytes : state[1][0]=175-->27
+state na invSubBytes : state[1][1]=185-->219
+state na invSubBytes : state[1][2]=133-->103
+state na invSubBytes : state[1][3]=85-->237
+state na invSubBytes : state[2][0]=17-->227
+state na invSubBytes : state[2][1]=211-->169
+state na invSubBytes : state[2][2]=203-->89
+state na invSubBytes : state[2][3]=49-->46
+state na invSubBytes : state[3][0]=238-->153
+state na invSubBytes : state[3][1]=185-->219
+state na invSubBytes : state[3][2]=193-->221
+state na invSubBytes : state[3][3]=230-->245
+
+addRoundKey:
+state[0][0]=121 XOR 0=121  In HEX: 79
+state[0][1]=88 XOR 99=59  In HEX: 3b
+state[0][2]=17 XOR 251=234  In HEX: ea
+state[0][3]=49 XOR 15=62  In HEX: 3e
+state[1][0]=27 XOR 0=27  In HEX: 1b
+state[1][1]=219 XOR 99=184  In HEX: b8
+state[1][2]=103 XOR 251=156  In HEX: 9c
+state[1][3]=237 XOR 15=226  In HEX: e2
+state[2][0]=227 XOR 0=227  In HEX: e3
+state[2][1]=169 XOR 99=202  In HEX: ca
+state[2][2]=89 XOR 251=162  In HEX: a2
+state[2][3]=46 XOR 15=33  In HEX: 21
+state[3][0]=153 XOR 0=153  In HEX: 99
+state[3][1]=219 XOR 99=184  In HEX: b8
+state[3][2]=221 XOR 251=38  In HEX: 26
+state[3][3]=245 XOR 15=250  In HEX: fa
+Finished decrypting!
+Controleer sleutel lengte. Moet 128/192/256 bits zijn.
+keyExpansion:
+key[0]=
+key[1]=0 0 0 0 63 63 63 63 fb fb fb fb f f f f 
+key[1]=76 76 76 76 38 38 38 38 7 7 7 7 c5 c5 c5 c5 
+key[2]=a6 a6 a6 a6 24 24 24 24 36 36 36 36 5 5 5 5 
+key[3]=6b 6b 6b 6b 7f 7f 7f 7f d2 d2 d2 d2 b5 b5 b5 b5 
+key[4]=d5 d5 d5 d5 3 3 3 3 7b 7b 7b 7b 21 21 21 21 
+key[5]=fd fd fd fd 54 54 54 54 20 20 20 20 b7 b7 b7 b7 
+key[6]=a9 a9 a9 a9 d3 d3 d3 d3 66 66 66 66 33 33 33 33 
+addRoundKey:
+state[0][0]=222 XOR 0=222  In HEX: de
+state[0][1]=87 XOR 99=52  In HEX: 34
+state[0][2]=114 XOR 251=137  In HEX: 89
+state[0][3]=70 XOR 15=73  In HEX: 49
+state[1][0]=202 XOR 0=202  In HEX: ca
+state[1][1]=147 XOR 99=240  In HEX: f0
+state[1][2]=151 XOR 251=108  In HEX: 6c
+state[1][3]=52 XOR 15=59  In HEX: 3b
+state[2][0]=237 XOR 0=237  In HEX: ed
+state[2][1]=222 XOR 99=189  In HEX: bd
+state[2][2]=154 XOR 251=97  In HEX: 61
+state[2][3]=17 XOR 15=30  In HEX: 1e
+state[3][0]=128 XOR 0=128  In HEX: 80
+state[3][1]=48 XOR 99=83  In HEX: 53
+state[3][2]=48 XOR 251=203  In HEX: cb
+state[3][3]=210 XOR 15=221  In HEX: dd
+state after invShiftRows[0][0]=222 in HEX :de
+state after invShiftRows[0][1]=52 in HEX :34
+state after invShiftRows[0][2]=137 in HEX :89
+state after invShiftRows[0][3]=73 in HEX :49
+state after invShiftRows[1][0]=59 in HEX :3b
+state after invShiftRows[1][1]=202 in HEX :ca
+state after invShiftRows[1][2]=240 in HEX :f0
+state after invShiftRows[1][3]=108 in HEX :6c
+state after invShiftRows[2][0]=97 in HEX :61
+state after invShiftRows[2][1]=30 in HEX :1e
+state after invShiftRows[2][2]=237 in HEX :ed
+state after invShiftRows[2][3]=189 in HEX :bd
+state after invShiftRows[3][0]=83 in HEX :53
+state after invShiftRows[3][1]=203 in HEX :cb
+state after invShiftRows[3][2]=221 in HEX :dd
+state after invShiftRows[3][3]=128 in HEX :80
+state na invSubBytes : state[0][0]=222-->156
+state na invSubBytes : state[0][1]=52-->40
+state na invSubBytes : state[0][2]=137-->242
+state na invSubBytes : state[0][3]=73-->164
+state na invSubBytes : state[1][0]=59-->73
+state na invSubBytes : state[1][1]=202-->16
+state na invSubBytes : state[1][2]=240-->23
+state na invSubBytes : state[1][3]=108-->184
+state na invSubBytes : state[2][0]=97-->216
+state na invSubBytes : state[2][1]=30-->233
+state na invSubBytes : state[2][2]=237-->83
+state na invSubBytes : state[2][3]=189-->205
+state na invSubBytes : state[3][0]=83-->80
+state na invSubBytes : state[3][1]=203-->89
+state na invSubBytes : state[3][2]=221-->201
+state na invSubBytes : state[3][3]=128-->58
+
+addRoundKey:
+state[0][0]=156 XOR 0=156  In HEX: 9c
+state[0][1]=40 XOR 99=75  In HEX: 4b
+state[0][2]=242 XOR 251=9  In HEX: 9
+state[0][3]=164 XOR 15=171  In HEX: ab
+state[1][0]=73 XOR 0=73  In HEX: 49
+state[1][1]=16 XOR 99=115  In HEX: 73
+state[1][2]=23 XOR 251=236  In HEX: ec
+state[1][3]=184 XOR 15=183  In HEX: b7
+state[2][0]=216 XOR 0=216  In HEX: d8
+state[2][1]=233 XOR 99=138  In HEX: 8a
+state[2][2]=83 XOR 251=168  In HEX: a8
+state[2][3]=205 XOR 15=194  In HEX: c2
+state[3][0]=80 XOR 0=80  In HEX: 50
+state[3][1]=89 XOR 99=58  In HEX: 3a
+state[3][2]=201 XOR 251=50  In HEX: 32
+state[3][3]=58 XOR 15=53  In HEX: 35
+Finished decrypting!
+
+The result converted back to a linear decimal representation:
+77,251,106,0,99,26,145,36,157,251,182,95,252,108,15,84
+The result converted back to a linear decimal representation:
+247,129,123,25,134,55,195,160,217,241,243,130,233,89,146,112
+The result converted back to a linear decimal representation:
+156,87,208,195,119,12,31,1,187,181,45,10,233,126,251,97
+The result converted back to a linear decimal representation:
+255,107,225,67,46,165,137,132,84,91,185,171,58,7,223,31
+The result converted back to a linear decimal representation:
+90,140,29,177,31,48,149,93,143,28,213,11,198,91,26,189
+The result converted back to a linear decimal representation:
+192,152,218,233,222,55,87,58,140,182,29,163,199,43,165,112
+The result converted back to a linear decimal representation:
+19,197,5,143,129,57,157,118,140,144,116,112,176,46,220,135
+The result converted back to a linear decimal representation:
+235,164,250,124,42,215,176,74,0,160,21,28,118,113,249,32
+The result converted back to a linear decimal representation:
+162,138,130,230,208,140,48,225,68,94,118,51,21,248,97,217
+The result converted back to a linear decimal representation:
+166,201,131,244,224,16,135,49,221,40,38,49,254,83,63,205
+The result converted back to a linear decimal representation:
+224,48,201,129,248,161,193,142,161,183,3,17,41,135,48,238
+The result converted back to a linear decimal representation:
+62,60,201,44,255,62,126,229,235,164,157,66,152,216,130,243
+The result converted back to a linear decimal representation:
+33,59,89,57,41,116,214,152,54,21,48,173,220,240,130,101
+The result converted back to a linear decimal representation:
+131,43,1,33,37,25,221,132,178,152,67,186,207,211,9,149
+The result converted back to a linear decimal representation:
+224,124,87,175,117,84,203,79,236,229,188,41,141,219,228,217
+The result converted back to a linear decimal representation:
+167,209,14,25,108,43,20,136,152,11,56,22,120,214,48,40
+The result converted back to a linear decimal representation:
+222,57,21,25,213,42,214,145,240,31,174,225,126,58,20,123
+convertStatesToByteString Result: 
+
+
+The hexadecimal result of the decrypt operation:
+4d fb 6a 0 63 1a 91 24 9d fb b6 5f fc 6c f 54 f7 81 7b 19 86 37 c3 a0 d9 f1 f3 82 e9 59 92 70 9c 57 d0 c3 77 c 1f 1 bb b5 2d a e9 7e fb 61 ff 6b e1 43 2e a5 89 84 54 5b b9 ab 3a 7 df 1f 5a 8c 1d b1 1f 30 95 5d 8f 1c d5 b c6 5b 1a bd c0 98 da e9 de 37 57 3a 8c b6 1d a3 c7 2b a5 70 13 c5 5 8f 81 39 9d 76 8c 90 74 70 b0 2e dc 87 eb a4 fa 7c 2a d7 b0 4a 0 a0 15 1c 76 71 f9 20 a2 8a 82 e6 d0 8c 30 e1 44 5e 76 33 15 f8 61 d9 a6 c9 83 f4 e0 10 87 31 dd 28 26 31 fe 53 3f cd e0 30 c9 81 f8 a1 c1 8e a1 b7 3 11 29 87 30 ee 3e 3c c9 2c ff 3e 7e e5 eb a4 9d 42 98 d8 82 f3 21 3b 59 39 29 74 d6 98 36 15 30 ad dc f0 82 65 83 2b 1 21 25 19 dd 84 b2 98 43 ba cf d3 9 95 e0 7c 57 af 75 54 cb 4f ec e5 bc 29 8d db e4 d9 a7 d1 e 19 6c 2b 14 88 98 b 38 16 78 d6 30 28 de 39 15 19 d5 2a d6 91 f0 1f ae e1 7e 3a 14 7b 
